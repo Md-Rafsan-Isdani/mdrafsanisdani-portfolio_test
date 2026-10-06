@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -20,6 +20,7 @@
       <li><a href="#journey">Journey</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#books">Books</a></li>
       <li><a href="#hobbies">Hobbies</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -82,6 +83,10 @@
             computer vision and deep learning to automated defect detection and predictive
             maintenance for Industry 4.0 manufacturing systems.
           </p>
+          <p>
+            Away from the lab, I write literary fiction as <strong>Rafsan Isdani</strong> —
+            three novels so far, all listed under <a href="#books" class="inline-link">Books &amp; Writing</a>.
+          </p>
         </div>
         <div class="about-highlights" data-anim>
           <div class="hl-card">
@@ -93,7 +98,7 @@
             <span class="hl-label">Automobile Eng.<br/>Marwadi University</span>
           </div>
           <div class="hl-card">
-            <span class="hl-num">9+</span>
+            <span class="hl-num">7+</span>
             <span class="hl-label">Engineering<br/>Projects</span>
           </div>
           <div class="hl-card">
@@ -719,169 +724,6 @@
           </div>
         </article>
 
-        <!-- Project 3: 6-DOF Robotic Arm -->
-        <article class="pj-card" data-anim data-expand>
-          <div class="pj-visual">
-            <svg class="pj-svg" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="g3a" x1="0" y1="0" x2="0.5" y2="1"><stop offset="0%" stop-color="#3E2723"/><stop offset="100%" stop-color="#1B0F0A"/></linearGradient>
-              </defs>
-              <rect width="600" height="375" fill="url(#g3a)"/>
-              <!-- Grid floor -->
-              <line x1="50" y1="310" x2="550" y2="310" stroke="#5D4037" stroke-width="0.5" opacity="0.5"/>
-              <line x1="50" y1="330" x2="550" y2="330" stroke="#5D4037" stroke-width="0.5" opacity="0.3"/>
-              <!-- Base platform -->
-              <ellipse cx="200" cy="310" rx="70" ry="15" fill="#333" stroke="#8B5E3C" stroke-width="1.5"/>
-              <text x="200" y="315" text-anchor="middle" fill="#A0826D" font-size="8" font-family="monospace">BASE (θ₁)</text>
-              <!-- Joint 1 -->
-              <rect x="185" y="240" width="30" height="70" rx="8" fill="#444" stroke="#D4A574" stroke-width="1.5"/>
-              <circle cx="200" cy="245" r="10" fill="#333" stroke="#D4A574" stroke-width="2"/>
-              <text x="200" y="249" text-anchor="middle" fill="#D4A574" font-size="7" font-family="monospace">J1</text>
-              <!-- Joint 2 - angled -->
-              <rect x="190" y="165" width="24" height="80" rx="6" fill="#444" stroke="#D4A574" stroke-width="1.5" transform="rotate(-15, 202, 205)"/>
-              <circle cx="205" cy="170" r="10" fill="#333" stroke="#D4A574" stroke-width="2"/>
-              <text x="205" y="174" text-anchor="middle" fill="#D4A574" font-size="7" font-family="monospace">J2</text>
-              <!-- Joint 3 -->
-              <rect x="207" y="105" width="22" height="70" rx="6" fill="#444" stroke="#D4A574" stroke-width="1.5" transform="rotate(10, 218, 140)"/>
-              <circle cx="215" cy="108" r="10" fill="#333" stroke="#D4A574" stroke-width="2"/>
-              <text x="215" y="112" text-anchor="middle" fill="#D4A574" font-size="7" font-family="monospace">J3</text>
-              <!-- Joint 4 -->
-              <rect x="218" y="65" width="60" height="18" rx="5" fill="#444" stroke="#D4A574" stroke-width="1.5"/>
-              <circle cx="275" cy="74" r="8" fill="#333" stroke="#D4A574" stroke-width="2"/>
-              <text x="275" y="78" text-anchor="middle" fill="#D4A574" font-size="6" font-family="monospace">J4</text>
-              <!-- Joint 5 -->
-              <rect x="280" y="60" width="14" height="28" rx="4" fill="#444" stroke="#D4A574" stroke-width="1.5"/>
-              <circle cx="287" cy="60" r="7" fill="#333" stroke="#D4A574" stroke-width="2"/>
-              <text x="287" y="63" text-anchor="middle" fill="#D4A574" font-size="5" font-family="monospace">J5</text>
-              <!-- Joint 6 / End effector -->
-              <rect x="295" y="50" width="30" height="20" rx="4" fill="#2a2a2a" stroke="#D4A574" stroke-width="2"/>
-              <circle cx="310" cy="52" r="5" fill="#333" stroke="#D4A574" stroke-width="1.5"/>
-              <text x="310" y="55" text-anchor="middle" fill="#D4A574" font-size="5" font-family="monospace">J6</text>
-              <!-- Gripper -->
-              <line x1="325" y1="55" x2="340" y2="48" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
-              <line x1="325" y1="65" x2="340" y2="72" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
-              <!-- DH Parameters table -->
-              <rect x="380" y="50" width="190" height="140" rx="6" fill="#1a1a1a" stroke="#8B5E3C" stroke-width="1.5"/>
-              <text x="475" y="72" text-anchor="middle" fill="#D4A574" font-size="11" font-family="monospace" font-weight="bold">DH PARAMETERS</text>
-              <line x1="390" y1="80" x2="560" y2="80" stroke="#5D4037" stroke-width="1"/>
-              <text x="405" y="95" fill="#A0826D" font-size="8" font-family="monospace">Joint  α      a      d      θ</text>
-              <text x="405" y="110" fill="#D4A574" font-size="8" font-family="monospace">  1    0°     0    d₁    θ₁</text>
-              <text x="405" y="123" fill="#D4A574" font-size="8" font-family="monospace">  2   -90°   a₂    0    θ₂</text>
-              <text x="405" y="136" fill="#D4A574" font-size="8" font-family="monospace">  3    0°    a₃    0    θ₃</text>
-              <text x="405" y="149" fill="#D4A574" font-size="8" font-family="monospace">  4   -90°    0   d₄    θ₄</text>
-              <text x="405" y="162" fill="#D4A574" font-size="8" font-family="monospace">  5    90°    0    0    θ₅</text>
-              <text x="405" y="175" fill="#D4A574" font-size="8" font-family="monospace">  6   -90°    0   d₆    θ₆</text>
-              <!-- Workspace arc -->
-              <path d="M120,200 Q100,80 200,40 Q300,10 350,60" fill="none" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
-              <text x="110" y="140" fill="#A0826D" font-size="8" font-family="monospace" transform="rotate(-70,110,140)">WORKSPACE</text>
-              <!-- FK/IK labels -->
-              <rect x="380" y="210" width="90" height="35" rx="5" fill="#1a1a1a" stroke="#D4A574" stroke-width="1.5"/>
-              <text x="425" y="225" text-anchor="middle" fill="#D4A574" font-size="9" font-family="monospace" font-weight="bold">FWD KIN</text>
-              <text x="425" y="238" text-anchor="middle" fill="#A0826D" font-size="7" font-family="monospace">θ → (x,y,z)</text>
-              <rect x="480" y="210" width="90" height="35" rx="5" fill="#1a1a1a" stroke="#D4A574" stroke-width="1.5"/>
-              <text x="525" y="225" text-anchor="middle" fill="#D4A574" font-size="9" font-family="monospace" font-weight="bold">INV KIN</text>
-              <text x="525" y="238" text-anchor="middle" fill="#A0826D" font-size="7" font-family="monospace">(x,y,z) → θ</text>
-              <!-- Bottom label -->
-              <text x="300" y="345" text-anchor="middle" fill="#D4A574" font-size="14" font-family="sans-serif" font-weight="bold">6-DOF Robotic Manipulator — Kinematics Analysis</text>
-              <text x="300" y="363" text-anchor="middle" fill="#A0826D" font-size="10" font-family="monospace">SolidWorks CAD + MATLAB Kinematics</text>
-            </svg>
-            <span class="pj-corner">Michigan Tech</span>
-          </div>
-          <div class="pj-info">
-            <h3 class="pj-title">6-DOF Robotic Arm Manipulator</h3>
-            <div class="pj-tags"><span>SolidWorks</span><span>MATLAB</span><span>Kinematics</span></div>
-            <span class="j-toggle">+</span>
-          </div>
-          <div class="pj-detail">
-            <p>Designed a 6-DOF robotic arm from initial concept sketch to a working prototype. Modeled the complete manipulator in SolidWorks and developed forward/inverse kinematics solutions in MATLAB for path planning and precision control.</p>
-            <div class="pj-tech-full"><span>SolidWorks</span><span>MATLAB</span><span>Forward Kinematics</span><span>Inverse Kinematics</span><span>3D Modeling</span></div>
-          </div>
-        </article>
-
-        <!-- Project 4: Path Planning — 4-Link -->
-        <article class="pj-card" data-anim data-expand>
-          <div class="pj-visual">
-            <svg class="pj-svg" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="g4a" x1="0" y1="0" x2="1" y2="0.8"><stop offset="0%" stop-color="#2C1810"/><stop offset="100%" stop-color="#4E342E"/></linearGradient>
-              </defs>
-              <rect width="600" height="375" fill="url(#g4a)"/>
-              <!-- Grid -->
-              <g opacity="0.15">
-                <line x1="50" y1="50" x2="50" y2="320" stroke="#D4A574" stroke-width="0.5"/>
-                <line x1="100" y1="50" x2="100" y2="320" stroke="#D4A574" stroke-width="0.5"/>
-                <line x1="150" y1="50" x2="150" y2="320" stroke="#D4A574" stroke-width="0.5"/>
-                <line x1="200" y1="50" x2="200" y2="320" stroke="#D4A574" stroke-width="0.5"/>
-                <line x1="250" y1="50" x2="250" y2="320" stroke="#D4A574" stroke-width="0.5"/>
-                <line x1="300" y1="50" x2="300" y2="320" stroke="#D4A574" stroke-width="0.5"/>
-                <line x1="350" y1="50" x2="350" y2="320" stroke="#D4A574" stroke-width="0.5"/>
-                <line x1="400" y1="50" x2="400" y2="320" stroke="#D4A574" stroke-width="0.5"/>
-                <line x1="50" y1="70" x2="400" y2="70" stroke="#D4A574" stroke-width="0.5"/>
-                <line x1="50" y1="120" x2="400" y2="120" stroke="#D4A574" stroke-width="0.5"/>
-                <line x1="50" y1="170" x2="400" y2="170" stroke="#D4A574" stroke-width="0.5"/>
-                <line x1="50" y1="220" x2="400" y2="220" stroke="#D4A574" stroke-width="0.5"/>
-                <line x1="50" y1="270" x2="400" y2="270" stroke="#D4A574" stroke-width="0.5"/>
-                <line x1="50" y1="320" x2="400" y2="320" stroke="#D4A574" stroke-width="0.5"/>
-              </g>
-              <!-- Obstacles -->
-              <rect x="160" y="120" width="50" height="50" rx="4" fill="#5D4037" stroke="#8B5E3C" stroke-width="1.5" opacity="0.7"/>
-              <text x="185" y="150" text-anchor="middle" fill="#A0826D" font-size="8" font-family="monospace">OBS 1</text>
-              <rect x="270" y="200" width="40" height="60" rx="4" fill="#5D4037" stroke="#8B5E3C" stroke-width="1.5" opacity="0.7"/>
-              <text x="290" y="235" text-anchor="middle" fill="#A0826D" font-size="8" font-family="monospace">OBS 2</text>
-              <circle cx="200" cy="250" r="25" fill="#5D4037" stroke="#8B5E3C" stroke-width="1.5" opacity="0.7"/>
-              <text x="200" y="254" text-anchor="middle" fill="#A0826D" font-size="8" font-family="monospace">OBS 3</text>
-              <!-- 4-Link Robot Config 1 (start) -->
-              <circle cx="100" cy="290" r="8" fill="#333" stroke="#D4A574" stroke-width="2"/>
-              <line x1="100" y1="290" x2="130" y2="250" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="130" cy="250" r="5" fill="#333" stroke="#D4A574" stroke-width="1.5"/>
-              <line x1="130" y1="250" x2="155" y2="210" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="155" cy="210" r="5" fill="#333" stroke="#D4A574" stroke-width="1.5"/>
-              <line x1="155" y1="210" x2="140" y2="180" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="140" cy="180" r="5" fill="#333" stroke="#D4A574" stroke-width="1.5"/>
-              <line x1="140" y1="180" x2="130" y2="160" stroke="#D4A574" stroke-width="2.5" stroke-linecap="round"/>
-              <circle cx="130" cy="160" r="3" fill="#D4A574"/>
-              <text x="80" y="310" fill="#D4A574" font-size="9" font-family="monospace">START</text>
-              <!-- Planned path (dotted) -->
-              <path d="M130,160 C130,100 230,90 250,100 S330,130 340,170 S370,250 350,290" fill="none" stroke="#D4A574" stroke-width="2" stroke-dasharray="6,4"/>
-              <!-- 4-Link Robot Config 2 (end) -->
-              <circle cx="350" cy="290" r="8" fill="#333" stroke="#D4A574" stroke-width="2"/>
-              <line x1="350" y1="290" x2="370" y2="260" stroke="#8B5E3C" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
-              <circle cx="370" cy="260" r="5" fill="#333" stroke="#8B5E3C" stroke-width="1.5" opacity="0.6"/>
-              <line x1="370" y1="260" x2="380" y2="230" stroke="#8B5E3C" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
-              <text x="340" y="310" fill="#A0826D" font-size="9" font-family="monospace">GOAL</text>
-              <!-- Path waypoints -->
-              <circle cx="250" cy="100" r="3" fill="#D4A574" opacity="0.8"/>
-              <circle cx="340" cy="170" r="3" fill="#D4A574" opacity="0.8"/>
-              <!-- Legend -->
-              <rect x="430" y="60" width="150" height="180" rx="8" fill="#1a1a1a" stroke="#8B5E3C" stroke-width="1.5"/>
-              <text x="505" y="85" text-anchor="middle" fill="#D4A574" font-size="11" font-family="monospace" font-weight="bold">PATH PLANNING</text>
-              <line x1="440" y1="95" x2="570" y2="95" stroke="#5D4037" stroke-width="1"/>
-              <rect x="450" y="108" width="12" height="12" rx="2" fill="#5D4037" stroke="#8B5E3C" stroke-width="1"/>
-              <text x="470" y="118" fill="#A0826D" font-size="9" font-family="monospace">Obstacles</text>
-              <line x1="450" y1="138" x2="462" y2="138" stroke="#D4A574" stroke-width="2" stroke-dasharray="4,2"/>
-              <text x="470" y="142" fill="#A0826D" font-size="9" font-family="monospace">Planned Path</text>
-              <circle cx="456" cy="160" r="5" fill="#333" stroke="#D4A574" stroke-width="1.5"/>
-              <text x="470" y="164" fill="#A0826D" font-size="9" font-family="monospace">Joint Nodes</text>
-              <line x1="450" y1="182" x2="462" y2="182" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
-              <text x="470" y="186" fill="#A0826D" font-size="9" font-family="monospace">Robot Links</text>
-              <text x="505" y="218" text-anchor="middle" fill="#6B4226" font-size="8" font-family="monospace">Collision-Free</text>
-              <text x="505" y="230" text-anchor="middle" fill="#6B4226" font-size="8" font-family="monospace">Motion Planning</text>
-              <!-- Bottom label -->
-              <text x="300" y="350" text-anchor="middle" fill="#D4A574" font-size="14" font-family="sans-serif" font-weight="bold">4-Link Manipulator — Collision-Free Path Planning</text>
-            </svg>
-            <span class="pj-corner">Michigan Tech</span>
-          </div>
-          <div class="pj-info">
-            <h3 class="pj-title">Robotic Path Planning — 4-Link Manipulator</h3>
-            <div class="pj-tags"><span>SolidWorks</span><span>MATLAB</span></div>
-            <span class="j-toggle">+</span>
-          </div>
-          <div class="pj-detail">
-            <p>Designed a 4-link robot in SolidWorks, then planned and simulated collision-free paths in MATLAB for obstacle avoidance and workspace optimization using advanced motion planning algorithms.</p>
-            <div class="pj-tech-full"><span>SolidWorks</span><span>MATLAB</span><span>Collision Avoidance</span><span>Workspace Analysis</span></div>
-          </div>
-        </article>
-
         <!-- Project 5: Mobile Robot Navigation — ROS & SLAM -->
         <article class="pj-card" data-anim data-expand>
           <div class="pj-visual">
@@ -1050,6 +892,123 @@
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ BOOKS & WRITING ═══════════════════
+       To add a book: copy one <article class="book"> block,
+       swap the cover image, text, and the two links.
+       ═════════════════════════════════════════════════════════ -->
+  <section class="books" id="books">
+    <div class="container">
+      <p class="books-kicker" data-anim>Fiction · Rafsan Isdani</p>
+      <h2 class="sec-title" data-anim>Books &amp; Writing</h2>
+      <p class="books-lede" data-anim>
+        Stories drawn to quieter things — people, places, memory, love,
+        and what remains after something has ended.
+      </p>
+      <div class="books-rule" data-anim aria-hidden="true"><span></span></div>
+
+      <div class="books-grid">
+
+        <!-- Book 1 — Amber Windows -->
+        <article class="book" data-anim>
+          <div class="book-stage">
+            <div class="book-cover">
+              <img src="images/book-amber-windows.jpg" alt="Cover of Amber Windows by Rafsan Isdani" loading="lazy" width="800" height="1200" />
+            </div>
+          </div>
+          <div class="book-body">
+            <p class="book-meta"><span>No. 01</span><span class="book-dot"></span><span>First Novel</span></p>
+            <h3 class="book-title">Amber Windows</h3>
+            <p class="book-desc">
+              A wintry literary novel of longing and belonging — of lit windows seen
+              from the cold, and the people we keep carrying long after we leave them.
+            </p>
+            <p class="book-format">Literary Fiction · Hardcover &amp; Kindle · 2026</p>
+            <div class="book-links">
+              <a href="https://www.amazon.com/dp/B0HKK41F57" target="_blank" rel="noopener" class="book-btn book-btn-solid" aria-label="Buy Amber Windows on Amazon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+                Amazon
+              </a>
+              <a href="https://www.goodreads.com/book/show/259433480-amber-windows" target="_blank" rel="noopener" class="book-btn book-btn-ghost" aria-label="View Amber Windows on Goodreads">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3z"/></svg>
+                Goodreads
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 2 — The Ocean of Cold Roses -->
+        <article class="book" data-anim>
+          <div class="book-stage">
+            <div class="book-cover">
+              <img src="images/book-ocean-of-cold-roses.jpg" alt="Cover of The Ocean of Cold Roses by Rafsan Isdani" loading="lazy" width="800" height="1200" />
+            </div>
+          </div>
+          <div class="book-body">
+            <p class="book-meta"><span>No. 02</span><span class="book-dot"></span><span>Second Novel</span></p>
+            <h3 class="book-title">The Ocean of Cold Roses</h3>
+            <p class="book-desc">
+              A literary novel of love and memory, set among mist, mountains and
+              still water — about the feelings that are hardest to name.
+            </p>
+            <p class="book-format">Literary Fiction · Hardcover &amp; Kindle · 2026</p>
+            <div class="book-links">
+              <a href="https://www.amazon.com/dp/B0HLY4N2KS" target="_blank" rel="noopener" class="book-btn book-btn-solid" aria-label="Buy The Ocean of Cold Roses on Amazon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+                Amazon
+              </a>
+              <a href="https://www.goodreads.com/book/show/260324171-the-ocean-of-cold-roses" target="_blank" rel="noopener" class="book-btn book-btn-ghost" aria-label="View The Ocean of Cold Roses on Goodreads">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3z"/></svg>
+                Goodreads
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 3 — Iridescent Eyes -->
+        <article class="book" data-anim>
+          <div class="book-stage">
+            <div class="book-cover">
+              <img src="images/book-iridescent-eyes.jpg" alt="Cover of Iridescent Eyes by Rafsan Isdani" loading="lazy" width="800" height="1278" />
+            </div>
+          </div>
+          <div class="book-body">
+            <p class="book-meta"><span>No. 03</span><span class="book-dot"></span><span>Third Novel</span></p>
+            <h3 class="book-title">Iridescent Eyes</h3>
+            <p class="book-desc">
+              Literary science fiction set in Kharun, a settlement in the canyons —
+              Aren's story of seeing, and of what a world chooses not to see.
+            </p>
+            <p class="book-format">Literary Sci-Fi · Hardcover &amp; Kindle · 2026</p>
+            <div class="book-links">
+              <a href="https://www.amazon.com/dp/B0HLYHM7P5" target="_blank" rel="noopener" class="book-btn book-btn-solid" aria-label="Buy Iridescent Eyes on Amazon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+                Amazon
+              </a>
+              <a href="https://www.goodreads.com/book/show/260327618-iridescent-eyes" target="_blank" rel="noopener" class="book-btn book-btn-ghost" aria-label="View Iridescent Eyes on Goodreads">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3z"/></svg>
+                Goodreads
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Goodreads Author Profile -->
+      <div class="author-bar" data-anim>
+        <div class="author-bar-text">
+          <p class="author-bar-name">Rafsan Isdani on Goodreads</p>
+          <p class="author-bar-sub">Follow for new releases, ratings, and reader questions.</p>
+        </div>
+        <a href="https://www.goodreads.com/author/show/72481745.Md_Rafsan_Isdani" target="_blank" rel="noopener" class="author-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="17" height="17" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></svg>
+          Goodreads Author Profile
+          <span class="author-btn-arrow" aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
   </section>
