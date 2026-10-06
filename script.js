@@ -8,6 +8,7 @@
    5. Scroll-triggered reveals
    6. Expandable cards (Journey, Skills, Projects)
    7. Skill bar animation
+   8. Book cover tilt (Books & Writing)
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -167,6 +168,30 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, { threshold: 0.25 });
     standaloneBars.forEach(b => bObs.observe(b));
+  }
+
+  /* ──────────────────────────────────────────────────────────
+     8. BOOK COVER TILT — follows the pointer on desktop only;
+        skipped on touch screens and for reduced-motion users
+     ────────────────────────────────────────────────────────── */
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (canHover && !reduceMotion) {
+    document.querySelectorAll('.book-stage').forEach(stage => {
+      const cover = stage.querySelector('.book-cover');
+      if (!cover) return;
+      stage.addEventListener('pointermove', e => {
+        const r = stage.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;   // -0.5 … 0.5
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        cover.style.setProperty('--ry', (x * 14).toFixed(2) + 'deg');
+        cover.style.setProperty('--rx', (-y * 10).toFixed(2) + 'deg');
+      });
+      stage.addEventListener('pointerleave', () => {
+        cover.style.removeProperty('--ry');
+        cover.style.removeProperty('--rx');
+      });
+    });
   }
 
 });
