@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rafsan Isdani — Engineer, Researcher &amp; Author</title>
-  <meta name="description" content="Md Rafsan Isdani — Mechatronics, Robotics &amp; Automation Engineer (MS, Michigan Technological University), researcher in AI-enabled industrial inspection, and author of literary fiction." />
+  <title>Md Rafsan Isdani — Mechatronics, Robotics &amp; Automation Engineer</title>
+  <meta name="description" content="Md Rafsan Isdani — Mechatronics, Robotics &amp; Automation Engineer (MS, Michigan Technological University) and author of literary fiction as Rafsan Isdani." />
   <meta name="theme-color" content="#05080f" />
 
-  <!-- Decide before first paint whether to show the 3D forest or the simple page -->
+  <!-- Choose the forest view or the simple page before the first paint -->
   <script>
     (function () {
       var d = document.documentElement, pref = null, ok = false;
@@ -25,8 +25,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Noto Serif Bengali only downloads when Bengali text appears on the page (unicode-range) -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+Bengali:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
   <script type="importmap">
@@ -40,27 +39,29 @@
 </head>
 <body>
 
-  <a class="skip-link" href="#directory">Skip to the village directory</a>
+  <a class="skip-link" href="#menu">Skip to the sections</a>
 
-  <!-- ═══════════ THE WORLD (decorative; every piece of content also exists as text below) ═══════════ -->
+  <!-- ═══════════ THE WORLD (decorative — all content is also written out below) ═══════════ -->
   <div class="sky" aria-hidden="true"></div>
   <canvas id="world" aria-hidden="true"></canvas>
   <div class="veil" aria-hidden="true"></div>
-  <div id="labels" class="labels"></div>
-
+  <div id="labels" class="labels" aria-hidden="true"></div>
   <p class="loader" role="status" aria-live="polite"><span class="loader-dot" aria-hidden="true"></span><span class="loader-text">Growing the forest…</span></p>
 
   <!-- ═══════════ TOP BAR ═══════════ -->
   <header class="topbar">
-    <a href="#top" class="brand" data-go="trailhead">Rafsan Isdani</a>
-    <nav class="topnav" aria-label="Destinations">
+    <a href="#home" class="brand" data-go="home">Rafsan Isdani</a>
+    <nav class="topnav" aria-label="Sections">
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-      <ul id="menu" class="menu">
-        <li><a href="#workshop" data-dest="workshop">Workshop</a></li>
-        <li><a href="#observatory" data-dest="observatory">Observatory</a></li>
-        <li><a href="#archive" data-dest="archive">Archive</a></li>
-        <li><a href="#library" data-dest="library">Library</a></li>
-        <li><a href="#cabin" data-dest="cabin">Cabin</a></li>
+      <ul id="menu" class="menu" tabindex="-1">
+        <li><a href="#home" data-go="home">Home</a></li>
+        <li><a href="#about" data-dest="about">About</a></li>
+        <li><a href="#journey" data-dest="journey">Journey</a></li>
+        <li><a href="#skills" data-dest="skills">Skills</a></li>
+        <li><a href="#projects" data-dest="projects">Projects</a></li>
+        <li><a href="#books" data-go="books">Books</a></li>
+        <li><a href="#hobbies" data-dest="hobbies">Hobbies</a></li>
+        <li><a href="#contact" data-dest="contact">Contact</a></li>
       </ul>
     </nav>
     <div class="tools">
@@ -72,92 +73,204 @@
     </div>
   </header>
 
-  <main id="top">
+  <main>
 
-    <!-- ═══════════ THE TRAIL — scroll drives the camera ═══════════ -->
-    <section class="journey" id="journey" aria-label="The forest trail">
+    <!-- ═══════════ HOME + THE ROAD (scrolling walks the main road) ═══════════ -->
+    <section class="journey-road" id="home" aria-label="Home">
       <div class="stage">
 
-        <div class="caption caption--hero" data-in="-1" data-out="0.12">
-          <p class="kicker">Engineer · Researcher · Author</p>
-          <h1 class="hero-name">Rafsan Isdani</h1>
-          <p class="hero-role">Mechatronics, Robotics &amp; Automation Engineer<span class="sep" aria-hidden="true"> · </span><br class="br-sm" />MS, Michigan Technological University</p>
+        <div class="caption caption--hero" data-in="-1" data-out="0.035">
+          <p class="pill"><span class="pill-dot" aria-hidden="true"></span> Open to Opportunities</p>
+          <h1 class="hero-name">Md Rafsan Isdani</h1>
+          <p class="hero-title">Mechatronics, Robotics &amp; Automation Engineer</p>
+          <ul class="hero-edu" aria-label="Education">
+            <li><strong>MS</strong> · Michigan Technological University</li>
+            <li><strong>B.Tech</strong> · Marwadi University, India</li>
+          </ul>
           <div class="hero-actions">
-            <button type="button" class="btn btn-gold" data-go="village">Go straight to the village</button>
-            <button type="button" class="btn btn-ghost" data-open-map>Open the map</button>
+            <button type="button" class="btn btn-gold world-only" data-begin>Begin the walk</button>
+            <a href="#about" class="btn btn-gold simple-only">Explore My Work</a>
+            <a href="https://linkedin.com/in/md-rafsan-isdani-128462199" target="_blank" rel="noopener" class="btn btn-ghost">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77A1.75 1.75 0 0 0 0 1.73v20.54A1.75 1.75 0 0 0 1.77 24h20.45A1.75 1.75 0 0 0 24 22.27V1.73A1.75 1.75 0 0 0 22.22 0Z"/></svg>
+              LinkedIn
+            </a>
           </div>
-          <p class="hint world-only"><span class="hint-line" aria-hidden="true"></span>Scroll to walk the trail</p>
+          <p class="hint world-only"><span class="hint-line" aria-hidden="true"></span>Scroll to see the map</p>
         </div>
 
-        <div class="caption caption--left world-only" data-in="0.16" data-out="0.36" aria-hidden="true">
-          <p class="kicker">On the trail</p>
-          <p class="caption-text">PLC programming, SCADA, industrial robotics and real-time control — bridging mechanical systems with intelligent automation.</p>
+        <div class="caption caption--map world-only" data-in="0.045" data-out="0.13" aria-hidden="true">
+          <p class="kicker">The map</p>
+          <p class="caption-text">One main road runs through the forest. Each house along it holds a part of the story — and the books live deep in the woods.</p>
         </div>
 
-        <div class="caption caption--right world-only" data-in="0.40" data-out="0.60" aria-hidden="true">
-          <p class="kicker">Deeper in</p>
-          <p class="caption-text">Computer vision and deep learning for automated defect detection and predictive maintenance.</p>
+        <div id="junctions" class="junctions world-only"></div>
+
+        <div class="travel world-only" hidden>
+          <span class="travel-text">On the road…</span>
+          <button type="button" class="tool" data-skip>Skip <span aria-hidden="true">»</span></button>
         </div>
 
-        <div class="caption caption--left world-only" data-in="0.64" data-out="0.82" aria-hidden="true">
-          <p class="kicker">By lantern light</p>
-          <p class="caption-text caption-serif">Stories drawn to quieter things — people, places, memory, love, and what remains after something has ended.</p>
-        </div>
-
-        <div class="hub" data-in="0.94" data-out="2">
-          <p class="kicker">The village</p>
-          <h2 class="hub-title">Five lit doors</h2>
-          <nav id="directory" class="directory" aria-label="Village directory" tabindex="-1">
-            <a href="#workshop" data-dest="workshop"><span class="d-name">Engineering Workshop</span><span class="d-sub">Robotics &amp; automation</span></a>
-            <a href="#observatory" data-dest="observatory"><span class="d-name">Observatory</span><span class="d-sub">AI &amp; computer vision</span></a>
-            <a href="#archive" data-dest="archive"><span class="d-name">Research Archive</span><span class="d-sub">Manuscripts</span></a>
-            <a href="#library" data-dest="library"><span class="d-name">Literary House</span><span class="d-sub">Novels</span></a>
-            <a href="#cabin" data-dest="cabin"><span class="d-name">Traveler's Cabin</span><span class="d-sub">About &amp; contact</span></a>
-          </nav>
-        </div>
-
-        <ol class="rail world-only" aria-label="Trail progress">
-          <li><button type="button" data-p="0"><span>Trailhead</span></button></li>
-          <li><button type="button" data-p="0.3"><span>The pines</span></button></li>
-          <li><button type="button" data-p="0.66"><span>Lantern path</span></button></li>
-          <li><button type="button" data-p="1"><span>Village</span></button></li>
-        </ol>
+        <ol class="rail world-only" aria-label="Along the road"></ol>
       </div>
     </section>
 
-    <!-- ═══════════ DESTINATIONS ═══════════
-         In the forest view these open as rooms after the camera enters a door.
-         In the simple page they read as ordinary sections. -->
-    <div class="destinations">
+    <!-- ═══════════ THE HOUSES ═══════════
+         Forest view: each section opens as a room once the camera walks in through its door.
+         Simple page: the sections read top to bottom like an ordinary site. -->
+    <div class="sections">
 
-      <!-- ─────────── ENGINEERING WORKSHOP ─────────── -->
-      <section class="dest dest--workshop" id="workshop" aria-labelledby="workshop-title" data-dest-panel="workshop">
+      <!-- ─────────── ABOUT — the cottage on the easy road ─────────── -->
+      <section class="dest dest--about" id="about" aria-labelledby="about-title" data-panel="about">
         <div class="room" aria-hidden="true">
           <div class="room-glow"></div>
           <svg class="room-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
-            <!-- window with snow -->
+            <rect x="1060" y="140" width="330" height="300" rx="4" fill="#0a1324" stroke="#3a2617" stroke-width="16"/>
+            <line x1="1225" y1="140" x2="1225" y2="440" stroke="#3a2617" stroke-width="8"/>
+            <path d="M1070 440 L1110 360 L1150 440 Z M1140 440 L1190 340 L1240 440 Z M1230 440 L1280 370 L1330 440 Z M1310 440 L1350 380 L1385 440 Z" fill="#11241b"/>
+            <path d="M1068 440 h316 v-14 q-160 -20 -316 0 z" fill="#dfe6f0" opacity=".6"/>
+            <g fill="#e6ecf6" opacity=".7"><circle cx="1100" cy="180" r="2"/><circle cx="1170" cy="250" r="1.5"/><circle cx="1290" cy="200" r="1.8"/><circle cx="1350" cy="280" r="1.6"/></g>
+            <rect x="760" y="640" width="720" height="26" fill="#2a1a10"/>
+            <path d="M880 640 l30 -60 h60 l30 60 z" fill="#4a2c16" opacity=".85"/>
+            <g fill="#2f1f14"><rect x="1240" y="580" width="22" height="60"/><rect x="1266" y="592" width="18" height="48"/><rect x="1288" y="572" width="24" height="68"/></g>
+            <rect x="0" y="780" width="1600" height="120" fill="#120b07"/>
+          </svg>
+        </div>
+        <div class="dest-scroll">
+          <div class="dest-bar">
+            <button type="button" class="back" data-close><span aria-hidden="true">←</span> Back to the road</button>
+            <button type="button" class="tool" data-open-map aria-haspopup="dialog">Map</button>
+          </div>
+          <div class="dest-inner">
+            <header class="dest-head about-head">
+              <div class="portrait"><img src="profile.jpg" alt="Md Rafsan Isdani" loading="lazy" /></div>
+              <div>
+                <p class="kicker">About</p>
+                <h2 id="about-title" tabindex="-1">About Me</h2>
+                <p class="lede">Mechatronics, Robotics &amp; Automation Engineer · MS, Michigan Technological University</p>
+              </div>
+            </header>
+            <div class="about card">
+              <div class="about-text">
+                <p>I'm a Mechatronics, Robotics &amp; Automation Engineer with a Master of Science from <strong>Michigan Technological University</strong> and a Bachelor of Technology in Automobile Engineering from <strong>Marwadi University, India</strong>.</p>
+                <p>My expertise lies in PLC programming, SCADA system design, industrial robotics (FANUC), and real-time control — bridging mechanical systems with intelligent automation to build solutions that work on the factory floor.</p>
+                <p>Beyond engineering, I carry leadership values from serving as a <strong>Cadet Sergeant in BNCC</strong> and as <strong>Youth Chief of Bangladesh Red Crescent</strong>, experiences that shaped my discipline, teamwork, and commitment to community.</p>
+                <p>I'm currently expanding into <strong>AI-enabled industrial inspection</strong> as a Volunteer Research Assistant in the Department of Applied Computing, applying computer vision and deep learning to automated defect detection and predictive maintenance for Industry 4.0 manufacturing systems.</p>
+                <p>Away from the lab, I write literary fiction as <strong>Rafsan Isdani</strong> — four novels so far, all listed under <a href="#books" data-go="books" class="text-link">Books &amp; Writing</a>.</p>
+              </div>
+              <ul class="facts">
+                <li><b>MS</b><span>Mechatronics<br />Michigan Tech</span></li>
+                <li><b>B.Tech</b><span>Automobile Eng.<br />Marwadi University</span></li>
+                <li><b>8+</b><span>Engineering<br />Projects</span></li>
+                <li><b>GTA</b><span>Physics Dept.<br />Michigan Tech</span></li>
+              </ul>
+            </div>
+            <nav class="dest-next" aria-label="Continue">
+              <button type="button" class="next-road" data-close>Continue on the main road <span aria-hidden="true">→</span></button>
+              <a href="#journey" data-dest="journey">Next: Journey →</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── JOURNEY — the stone lodge at the end of the hard path ─────────── -->
+      <section class="dest dest--journey" id="journey" aria-labelledby="journey-title" data-panel="journey">
+        <div class="room" aria-hidden="true">
+          <div class="room-glow"></div>
+          <svg class="room-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <path d="M1080 520 V250 a140 140 0 0 1 280 0 V520 Z" fill="#0b1426" stroke="#2c2620" stroke-width="16"/>
+            <line x1="1220" y1="112" x2="1220" y2="520" stroke="#2c2620" stroke-width="8"/>
+            <path d="M1090 520 L1140 430 L1190 520 Z M1170 520 L1230 410 L1290 520 Z M1260 520 L1310 450 L1352 520 Z" fill="#11241b"/>
+            <g opacity=".55" fill="none" stroke="#c9a86a" stroke-width="2">
+              <rect x="170" y="160" width="420" height="280" fill="#1b1712"/>
+              <path d="M200 400 C 260 380, 280 320, 340 330 S 420 260, 470 250 S 540 200, 560 190" stroke-dasharray="8 7"/>
+              <circle cx="200" cy="400" r="6" fill="#c9a86a"/><circle cx="340" cy="330" r="5"/><circle cx="470" cy="250" r="5"/><circle cx="560" cy="190" r="7" fill="#c9a86a"/>
+            </g>
+            <g fill="#2a241e"><rect x="230" y="620" width="300" height="120" rx="10"/><rect x="250" y="600" width="260" height="30" rx="8"/></g>
+            <rect x="0" y="780" width="1600" height="120" fill="#0f0d0a"/>
+          </svg>
+        </div>
+        <div class="dest-scroll">
+          <div class="dest-bar">
+            <button type="button" class="back" data-close><span aria-hidden="true">←</span> Back to the road</button>
+            <button type="button" class="tool" data-open-map aria-haspopup="dialog">Map</button>
+          </div>
+          <div class="dest-inner">
+            <header class="dest-head">
+              <p class="kicker">Journey</p>
+              <h2 id="journey-title" tabindex="-1">My Journey</h2>
+            </header>
+            <ol class="timeline">
+              <li class="card">
+                <p class="t-date">2024 – 2026</p>
+                <h3>M.S. Mechatronics, Robotics &amp; Automation</h3>
+                <p class="muted">Michigan Technological University, Houghton, MI</p>
+                <p>Focus on Industrial Automation, Robotics, and Real-time Control systems.</p>
+                <p><strong>Key Courses:</strong> Advanced PLC, Real-time Robotics (FANUC), Data Acquisition &amp; Signal Processing, Control Systems, Dynamics &amp; Kinematics.</p>
+              </li>
+              <li class="card">
+                <p class="t-date">Jul 2026 – Present</p>
+                <h3>Volunteer Research Assistant — Applied Computing</h3>
+                <p class="muted">Michigan Technological University</p>
+                <p>Conducting literature reviews and technical documentation on AI-enabled industrial inspection, computer vision, and smart manufacturing systems. Analyzing camera image datasets and evaluating machine vision techniques for automated defect detection and quality inspection.</p>
+                <p><strong>Focus:</strong> Designing and developing AI-based inspection solutions for Industry 4.0 manufacturing applications.</p>
+              </li>
+              <li class="card">
+                <p class="t-date">Aug 2025 – May 2026</p>
+                <h3>Graduate Teaching Assistant — Physics</h3>
+                <p class="muted">Michigan Technological University</p>
+                <p>Instructed undergraduate physics labs, guiding over 250+ students across 2 independent engineering physics lab courses in experimental methods, instrumentation, data acquisition, and technical problem-solving.</p>
+                <p>Applied mechatronics and engineering principles to bridge theory with real-world engineering systems, evaluating performance and managing grades using Canvas and the university database.</p>
+              </li>
+              <li class="card">
+                <p class="t-date">2019 – 2023</p>
+                <h3>B.Tech Automobile Engineering</h3>
+                <p class="muted">Marwadi University, Rajkot, Gujarat, India</p>
+                <p>Built a strong foundation in mechanical systems, thermodynamics, automotive design, manufacturing processes, and vehicle dynamics. Developed hands-on skills through projects and lab work in automotive engineering.</p>
+              </li>
+              <li class="card">
+                <p class="t-date">Jan 2021 – Dec 2021</p>
+                <h3>Technical Intern — Office of International Affairs</h3>
+                <p class="muted">Marwadi University, Rajkot, India</p>
+                <p>Administered and maintained student records using web-based information systems and Microsoft Excel. Ensured data accuracy, consistency, and system reliability through formulas, data validation, and reporting.</p>
+              </li>
+              <li class="card">
+                <p class="t-date">Leadership &amp; Discipline</p>
+                <h3>Cadet Sergeant — BNCC</h3>
+                <p class="muted">Bangladesh National Cadet Corps</p>
+                <p>Served as Cadet Sergeant in the Bangladesh National Cadet Corps (BNCC), developing strong leadership, discipline, and teamwork skills through rigorous military-style training, drills, and community service activities.</p>
+              </li>
+              <li class="card">
+                <p class="t-date">2017</p>
+                <h3>Youth Chief — Bangladesh Red Crescent Society</h3>
+                <p class="muted">Chittagong Port College Unit</p>
+                <p>Led the youth division of Bangladesh Red Crescent Society at Chittagong Port College, organizing humanitarian aid activities, disaster relief awareness, first aid training, and community health campaigns.</p>
+              </li>
+            </ol>
+            <nav class="dest-next" aria-label="Continue">
+              <button type="button" class="next-road" data-close>Continue on the main road <span aria-hidden="true">→</span></button>
+              <a href="#skills" data-dest="skills">Next: Skills →</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── SKILLS — the workshop on the plank road ─────────── -->
+      <section class="dest dest--skills" id="skills" aria-labelledby="skills-title" data-panel="skills">
+        <div class="room" aria-hidden="true">
+          <div class="room-glow"></div>
+          <svg class="room-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
             <rect x="1180" y="150" width="260" height="320" rx="4" fill="#0b1426" stroke="#3b2a1d" stroke-width="14"/>
             <line x1="1310" y1="150" x2="1310" y2="470" stroke="#3b2a1d" stroke-width="8"/>
             <line x1="1180" y1="310" x2="1440" y2="310" stroke="#3b2a1d" stroke-width="8"/>
             <path d="M1190 470 L1230 400 L1270 470 Z M1250 470 L1300 380 L1350 470 Z M1340 470 L1385 410 L1430 470 Z" fill="#14281f"/>
-            <g fill="#dfe7f2" opacity=".7"><circle cx="1210" cy="190" r="2"/><circle cx="1260" cy="240" r="1.6"/><circle cx="1350" cy="200" r="2"/><circle cx="1400" cy="260" r="1.5"/><circle cx="1230" cy="350" r="1.8"/><circle cx="1380" cy="340" r="1.6"/></g>
-            <!-- pinned technical drawing -->
-            <g opacity=".5" stroke="#c9a86a" fill="none" stroke-width="1.5">
-              <rect x="180" y="150" width="330" height="230" fill="#1a140f"/>
-              <circle cx="300" cy="265" r="62"/><circle cx="300" cy="265" r="22"/>
-              <line x1="300" y1="190" x2="300" y2="340" stroke-dasharray="6 6"/><line x1="225" y1="265" x2="375" y2="265" stroke-dasharray="6 6"/>
-              <rect x="400" y="215" width="80" height="100"/><line x1="400" y1="340" x2="480" y2="340"/><line x1="400" y1="333" x2="400" y2="347"/><line x1="480" y1="333" x2="480" y2="347"/>
-            </g>
-            <!-- pegboard with tools -->
             <g opacity=".45" fill="none" stroke="#a88a5a" stroke-width="5" stroke-linecap="round">
-              <path d="M600 200 v120 M600 200 l-14 -22 M600 200 l14 -22"/>
-              <circle cx="700" cy="250" r="34"/><circle cx="700" cy="250" r="12"/>
-              <path d="M780 190 l60 120 M760 210 l40 -20"/>
+              <path d="M240 200 v120 M240 200 l-14 -22 M240 200 l14 -22"/>
+              <circle cx="340" cy="250" r="34"/><circle cx="340" cy="250" r="12"/>
+              <path d="M420 190 l60 120 M400 210 l40 -20"/>
+              <circle cx="560" cy="240" r="46"/><circle cx="560" cy="240" r="16"/>
             </g>
-            <!-- hanging lamp -->
             <line x1="860" y1="0" x2="860" y2="120" stroke="#2a2018" stroke-width="4"/>
             <path d="M820 120 h80 l30 50 h-140 z" fill="#2a2018"/>
-            <!-- workbench and arm silhouette -->
             <rect x="0" y="690" width="1600" height="30" fill="#2b1e15"/>
             <rect x="80" y="720" width="30" height="180" fill="#20160f"/><rect x="1490" y="720" width="30" height="180" fill="#20160f"/>
             <g fill="#1b130d">
@@ -165,26 +278,184 @@
               <rect x="1025" y="540" width="34" height="115" rx="10"/>
               <rect x="1020" y="520" width="170" height="30" rx="12" transform="rotate(-18 1040 535)"/>
               <circle cx="1042" cy="540" r="26"/><circle cx="1180" cy="488" r="18"/>
-              <path d="M1188 480 l40 26 l-8 10 l-40 -22 z M1190 494 l34 34 l-10 8 l-30 -32 z"/>
             </g>
-            <g fill="#1b130d"><circle cx="420" cy="670" r="30"/><rect x="370" y="660" width="160" height="30" rx="4"/><rect x="560" y="610" width="90" height="80" rx="6"/></g>
           </svg>
         </div>
         <div class="dest-scroll">
           <div class="dest-bar">
-            <button type="button" class="back" data-close><span aria-hidden="true">←</span> Back to the village</button>
+            <button type="button" class="back" data-close><span aria-hidden="true">←</span> Back to the road</button>
             <button type="button" class="tool" data-open-map aria-haspopup="dialog">Map</button>
           </div>
           <div class="dest-inner">
             <header class="dest-head">
-              <p class="kicker">The Engineering Workshop</p>
-              <h2 id="workshop-title" tabindex="-1">Robotics, automation &amp; mechatronics</h2>
-              <p class="lede">PLC programming, SCADA system design, industrial robotics (FANUC) and real-time control — bridging mechanical systems with intelligent automation to build solutions that work on the factory floor.</p>
+              <p class="kicker">Skills</p>
+              <h2 id="skills-title" tabindex="-1">Technical Skills</h2>
             </header>
+            <div class="skills">
+              <div class="card skill-set">
+                <h3>Industrial Automation</h3>
+                <ul class="levels">
+                  <li><span>RSLogix 5000 (Allen-Bradley)</span><i style="--l:92%"></i></li>
+                  <li><span>TIA Portal (Siemens S7-1500/1200)</span><i style="--l:85%"></i></li>
+                  <li><span>SCADA (Ignition)</span><i style="--l:87%"></i></li>
+                  <li><span>HMI (FactoryTalk)</span><i style="--l:80%"></i></li>
+                  <li><span>Ladder Logic Programming</span><i style="--l:93%"></i></li>
+                  <li><span>Structured Text (ST)</span><i style="--l:76%"></i></li>
+                </ul>
+              </div>
+              <div class="card skill-set">
+                <h3>Robotics</h3>
+                <ul class="levels">
+                  <li><span>FANUC (TP / ROBOGUIDE)</span><i style="--l:88%"></i></li>
+                  <li><span>ROS / Gazebo / Rviz</span><i style="--l:80%"></i></li>
+                  <li><span>SLAM &amp; Navigation</span><i style="--l:78%"></i></li>
+                </ul>
+              </div>
+              <div class="card skill-set">
+                <h3>Programming</h3>
+                <ul class="levels">
+                  <li><span>Python</span><i style="--l:82%"></i></li>
+                  <li><span>MATLAB / Simulink</span><i style="--l:85%"></i></li>
+                  <li><span>C</span><i style="--l:75%"></i></li>
+                  <li><span>LabVIEW</span><i style="--l:78%"></i></li>
+                </ul>
+              </div>
+              <div class="card skill-set">
+                <h3>Design &amp; Simulation</h3>
+                <ul class="chips"><li>SolidWorks</li><li>AutoCAD</li><li>Fusion 360</li><li>MATLAB</li><li>Gazebo</li><li>Rviz</li><li>SLAM</li><li>LabVIEW</li><li>Linux</li><li>ROBOGUIDE</li></ul>
+              </div>
+              <div class="card skill-set">
+                <h3>AI/ML &amp; Computer Vision</h3>
+                <ul class="levels">
+                  <li><span>Machine Learning</span><i style="--l:78%"></i></li>
+                  <li><span>Deep Learning (PyTorch)</span><i style="--l:75%"></i></li>
+                  <li><span>Computer Vision</span><i style="--l:76%"></i></li>
+                  <li><span>Predictive Maintenance</span><i style="--l:72%"></i></li>
+                </ul>
+              </div>
+            </div>
+            <nav class="dest-next" aria-label="Continue">
+              <button type="button" class="next-road" data-close>Continue on the main road <span aria-hidden="true">→</span></button>
+              <a href="#projects" data-dest="projects">Next: Projects →</a>
+            </nav>
+          </div>
+        </div>
+      </section>
 
+      <!-- ─────────── PROJECTS — the engineering hall across the bridge ─────────── -->
+      <section class="dest dest--projects" id="projects" aria-labelledby="projects-title" data-panel="projects">
+        <div class="room" aria-hidden="true">
+          <div class="room-glow"></div>
+          <svg class="room-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <defs><linearGradient id="slitSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1a33"/><stop offset="1" stop-color="#132544"/></linearGradient></defs>
+            <g fill="none" stroke="#2a3a58" stroke-width="3" opacity=".8">
+              <path d="M-100 900 Q800 -380 1700 900"/><path d="M100 900 Q800 -200 1500 900"/><path d="M300 900 Q800 -40 1300 900"/>
+            </g>
+            <path d="M720 0 H880 L870 520 H730 Z" fill="url(#slitSky)"/>
+            <g fill="#e9eef8"><circle cx="760" cy="80" r="1.8"/><circle cx="820" cy="140" r="1.2"/><circle cx="790" cy="230" r="2.2"/><circle cx="850" cy="300" r="1.4"/><circle cx="760" cy="380" r="1.2"/><circle cx="835" cy="430" r="1.8"/></g>
+            <g fill="#141d2e">
+              <rect x="640" y="360" width="420" height="58" rx="22" transform="rotate(-32 850 389)"/>
+              <path d="M860 520 L780 900 H820 L870 600 L920 900 H960 Z"/>
+              <circle cx="866" cy="520" r="34"/>
+            </g>
+            <rect x="0" y="760" width="1600" height="140" fill="#070b14"/>
+          </svg>
+        </div>
+        <div class="dest-scroll">
+          <div class="dest-bar">
+            <button type="button" class="back" data-close><span aria-hidden="true">←</span> Back to the road</button>
+            <button type="button" class="tool" data-open-map aria-haspopup="dialog">Map</button>
+          </div>
+          <div class="dest-inner">
+            <header class="dest-head">
+              <p class="kicker">Projects</p>
+              <h2 id="projects-title" tabindex="-1">Projects</h2>
+            </header>
             <div class="works">
 
-              <article class="work">
+              <article class="work card">
+                <figure class="work-fig"><svg class="pj-svg" role="img" aria-label="Diagram: VLM-Assisted Prognostics — Turbofan RUL on NASA C-MAPSS" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g10a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2C1810"/><stop offset="100%" stop-color="#0F0805"/></linearGradient>
+              </defs>
+              <rect width="600" height="375" fill="url(#g10a)"/>
+              <!-- Turbofan engine (side view) -->
+              <ellipse cx="70" cy="110" rx="18" ry="55" fill="#1a1a1a" stroke="#D4A574" stroke-width="2"/>
+              <line x1="70" y1="60" x2="70" y2="160" stroke="#8B5E3C" stroke-width="1"/>
+              <line x1="55" y1="80" x2="85" y2="140" stroke="#8B5E3C" stroke-width="1"/>
+              <line x1="55" y1="140" x2="85" y2="80" stroke="#8B5E3C" stroke-width="1"/>
+              <path d="M70,55 L170,72 L170,148 L70,165" fill="#222" stroke="#8B5E3C" stroke-width="1.5"/>
+              <rect x="95" y="92" width="65" height="36" rx="4" fill="#2C1810" stroke="#A0826D" stroke-width="1"/>
+              <text x="127" y="114" text-anchor="middle" fill="#D4A574" font-size="8" font-family="monospace">HPC · HPT</text>
+              <text x="115" y="188" text-anchor="middle" fill="#D4A574" font-size="9" font-family="monospace" font-weight="bold">C-MAPSS</text>
+              <text x="115" y="201" text-anchor="middle" fill="#A0826D" font-size="7" font-family="monospace">21 sensors · 707 engines</text>
+              <!-- Sensor plot panel -->
+              <rect x="195" y="45" width="175" height="130" rx="6" fill="#1a1a1a" stroke="#8B5E3C" stroke-width="1.5"/>
+              <text x="282" y="62" text-anchor="middle" fill="#D4A574" font-size="8" font-family="monospace">SENSOR PLOTS</text>
+              <line x1="205" y1="160" x2="360" y2="160" stroke="#5D4037" stroke-width="1"/>
+              <polyline points="205,140 225,138 245,141 265,135 285,132 305,124 325,115 345,100 360,88" fill="none" stroke="#D4A574" stroke-width="1.8"/>
+              <polyline points="205,100 225,102 245,99 265,104 285,106 305,112 325,120 345,132 360,142" fill="none" stroke="#A0826D" stroke-width="1.3"/>
+              <polyline points="205,80 225,78 245,81 265,79 285,80 305,78 325,81 345,79 360,80" fill="none" stroke="#6B4226" stroke-width="1.2"/>
+              <line x1="325" y1="70" x2="325" y2="160" stroke="#D4A574" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+              <!-- Arrows: data to two branches -->
+              <line x1="170" y1="110" x2="193" y2="110" stroke="#D4A574" stroke-width="1.5" stroke-dasharray="4,3"/>
+              <line x1="282" y1="175" x2="282" y2="210" stroke="#D4A574" stroke-width="1.5" stroke-dasharray="4,3"/>
+              <polygon points="277,207 282,215 287,207" fill="#D4A574"/>
+              <!-- VLM observer -->
+              <rect x="215" y="217" width="135" height="44" rx="6" fill="#2C1810" stroke="#D4A574" stroke-width="1.5"/>
+              <text x="282" y="236" text-anchor="middle" fill="#D4A574" font-size="10" font-family="monospace" font-weight="bold">VLM OBSERVER</text>
+              <text x="282" y="251" text-anchor="middle" fill="#A0826D" font-size="7" font-family="monospace">Qwen2.5-VL-7B · trend · band · abstain</text>
+              <!-- Numerical branch -->
+              <rect x="50" y="217" width="135" height="44" rx="6" fill="#2C1810" stroke="#8B5E3C" stroke-width="1.5"/>
+              <text x="117" y="236" text-anchor="middle" fill="#D4A574" font-size="10" font-family="monospace" font-weight="bold">8 RUL MODELS</text>
+              <text x="117" y="251" text-anchor="middle" fill="#A0826D" font-size="7" font-family="monospace">XGBoost · BiLSTM · TCN · Transformer</text>
+              <line x1="115" y1="205" x2="115" y2="215" stroke="#D4A574" stroke-width="1.5" stroke-dasharray="3,2"/>
+              <!-- To fusion -->
+              <line x1="117" y1="261" x2="117" y2="285" stroke="#A0826D" stroke-width="1.2"/>
+              <line x1="282" y1="261" x2="282" y2="285" stroke="#A0826D" stroke-width="1.2" stroke-dasharray="3,2"/>
+              <line x1="117" y1="285" x2="282" y2="285" stroke="#A0826D" stroke-width="1.2"/>
+              <line x1="200" y1="285" x2="200" y2="293" stroke="#A0826D" stroke-width="1.2"/>
+              <rect x="135" y="293" width="130" height="26" rx="5" fill="#1a1a1a" stroke="#D4A574" stroke-width="1.5"/>
+              <text x="200" y="310" text-anchor="middle" fill="#D4A574" font-size="8" font-family="monospace" font-weight="bold">DETERMINISTIC FUSION</text>
+              <!-- Findings panel -->
+              <rect x="400" y="45" width="175" height="275" rx="8" fill="#1a1a1a" stroke="#8B5E3C" stroke-width="1.5"/>
+              <text x="487" y="68" text-anchor="middle" fill="#D4A574" font-size="11" font-family="monospace" font-weight="bold">FIGURE LEGIBILITY</text>
+              <line x1="410" y1="78" x2="565" y2="78" stroke="#5D4037" stroke-width="1"/>
+              <text x="415" y="98" fill="#A0826D" font-size="8" font-family="monospace">Unreadable figures</text>
+              <text x="415" y="120" fill="#A0826D" font-size="7" font-family="monospace">FD001</text>
+              <rect x="455" y="112" width="100" height="10" rx="2" fill="#2C1810"/><rect x="455" y="112" width="20" height="10" rx="2" fill="#D4A574"/>
+              <text x="415" y="140" fill="#A0826D" font-size="7" font-family="monospace">FD003</text>
+              <rect x="455" y="132" width="100" height="10" rx="2" fill="#2C1810"/><rect x="455" y="132" width="13" height="10" rx="2" fill="#D4A574"/>
+              <text x="415" y="160" fill="#A0826D" font-size="7" font-family="monospace">FD002</text>
+              <rect x="455" y="152" width="100" height="10" rx="2" fill="#2C1810"/><rect x="455" y="152" width="60" height="10" rx="2" fill="#C8956C"/>
+              <text x="415" y="180" fill="#A0826D" font-size="7" font-family="monospace">FD004</text>
+              <rect x="455" y="172" width="100" height="10" rx="2" fill="#2C1810"/><rect x="455" y="172" width="58" height="10" rx="2" fill="#C8956C"/>
+              <text x="487" y="203" text-anchor="middle" fill="#6B4226" font-size="7" font-family="monospace">1 regime  vs  6 regimes</text>
+              <line x1="410" y1="215" x2="565" y2="215" stroke="#5D4037" stroke-width="1"/>
+              <text x="415" y="235" fill="#A0826D" font-size="8" font-family="monospace">3 seeds · 4 subsets</text>
+              <text x="415" y="252" fill="#A0826D" font-size="8" font-family="monospace">2,121 VLM queries</text>
+              <text x="415" y="269" fill="#A0826D" font-size="8" font-family="monospace">Bounded ±15% reweight</text>
+              <text x="415" y="286" fill="#A0826D" font-size="8" font-family="monospace">Wilcoxon + paired t-test</text>
+              <text x="487" y="308" text-anchor="middle" fill="#6B4226" font-size="8" font-family="monospace">Abstention as signal</text>
+              <!-- Bottom label -->
+              <text x="300" y="350" text-anchor="middle" fill="#D4A574" font-size="14" font-family="sans-serif" font-weight="bold">VLM Evidence for Turbofan RUL Prognostics</text>
+              <text x="300" y="366" text-anchor="middle" fill="#A0826D" font-size="10" font-family="monospace">NASA C-MAPSS · Vision-Language + Numerical Fusion</text>
+            </svg><figcaption class="work-tag">Research · Michigan Tech</figcaption></figure>
+                <div class="work-body">
+                  <h3>VLM-Assisted Prognostics — Turbofan RUL on NASA C-MAPSS</h3>
+                  <ul class="chips chips--key"><li>Vision-Language Models</li><li>Deep Learning</li><li>PHM</li></ul>
+                  <p>Built a two-branch prognostic framework that pairs eight numerical remaining-useful-life (RUL) models (XGBoost, BiLSTM, TCN, MS-TCN, Transformer and more) with Qwen2.5-VL-7B, which reads full-history plots of all 21 engine sensors and reports degradation trend, regime, a qualitative life band and figure legibility — or abstains when a plot is unreadable. A deterministic, bounded fusion rule keeps the final RUL under numerical control.</p>
+                  <p>Evaluated on all four C-MAPSS subsets (707 test engines) across three random seeds. Visual evidence did not improve RUL accuracy, but it exposed a strong reliability signal: the VLM judged 13–20% of figures unreadable under a single operating condition versus 58–60% under six — pointing to VLMs as a qualitative screening and evidence-quality layer rather than a numerical predictor.</p>
+                  <p><strong>Status:</strong> Submitted for publication — <em>Aerospace Science and Technology</em> (Elsevier).</p>
+                  <ul class="chips"><li>Python</li><li>PyTorch</li><li>Qwen2.5-VL</li><li>XGBoost</li><li>Transformers</li><li>Predictive Maintenance</li></ul>
+                  <a href="https://github.com/Md-Rafsan-Isdani/C-MAPSS-VLM-Prognostics" target="_blank" rel="noopener" class="btn btn-gold btn-sm" aria-label="View the C-MAPSS VLM Prognostics code on GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+                    View Code on GitHub
+                  </a>
+                </div>
+              </article>
+
+              <article class="work card">
                 <figure class="work-fig"><svg class="pj-svg" role="img" aria-label="Diagram: Project Neptune — Pneumatic Cobot Workcell Safety Assessment" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="g7a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1B0F0A"/><stop offset="100%" stop-color="#3E2723"/></linearGradient>
@@ -245,13 +516,14 @@
             </svg><figcaption class="work-tag">Michigan Tech</figcaption></figure>
                 <div class="work-body">
                   <h3>Project Neptune — Pneumatic Cobot Workcell Safety Assessment</h3>
+                  <ul class="chips chips--key"><li>ISO 13849-1</li><li>Functional Safety</li><li>Risk Assessment</li></ul>
                   <p>Conducted an ISO 13849-1 safety assessment of a pneumatic collaborative robot workcell featuring a Category 3 dual-channel safety architecture. Calculated MTTFd, DCavg, and PFHd (2.47 × 10⁻⁷/h) to verify compliance with Performance Level d (PLd) and SIL 2 requirements.</p>
                   <p>Determined a minimum safety distance of 218 mm with a total system response time of ≤100 ms per ISO 13855, and proposed downstream pressure monitoring and automated valve testing to support future PLe/SIL 3 compliance.</p>
-                  <ul class="chips" aria-label="Methods"><li>ISO 13849-1</li><li>ISO 13855</li><li>Functional Safety</li><li>Machine Safety</li><li>Industrial Automation</li></ul>
+                  <ul class="chips"><li>ISO 13849-1</li><li>ISO 13855</li><li>Functional Safety</li><li>Machine Safety</li><li>Industrial Automation</li></ul>
                 </div>
               </article>
 
-              <article class="work">
+              <article class="work card">
                 <figure class="work-fig"><svg class="pj-svg" role="img" aria-label="Diagram: Data Acquisition &amp; Real-Time Motor Control System" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="g8a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3E2723"/><stop offset="100%" stop-color="#1B0F0A"/></linearGradient>
@@ -320,13 +592,14 @@
             </svg><figcaption class="work-tag">Michigan Tech</figcaption></figure>
                 <div class="work-body">
                   <h3>Data Acquisition &amp; Real-Time Motor Control System</h3>
+                  <ul class="chips chips--key"><li>LabVIEW</li><li>MATLAB/Simulink</li><li>NI DAQ</li></ul>
                   <p>Designed a LabVIEW-based position control system integrating a Vernier light sensor with a 28BYJ-48 stepper motor to achieve real-time bidirectional rotation control based on object proximity, with 2 ms sensor sampling, direction control, and selectable full/half-step operation through a custom GUI.</p>
                   <p>Developed a MATLAB/Simulink speed control model to regulate motor speed based on ambient light intensity via an NI PCI-6024E DAQ interface, with a live dashboard for monitoring RPM and light intensity (Lux) trends in real time.</p>
-                  <ul class="chips" aria-label="Tools"><li>LabVIEW</li><li>MATLAB/Simulink</li><li>NI ELVIS III</li><li>NI PCI-6024E DAQ</li><li>Sensor Integration</li></ul>
+                  <ul class="chips"><li>LabVIEW</li><li>MATLAB/Simulink</li><li>NI ELVIS III</li><li>NI PCI-6024E DAQ</li><li>Sensor Integration</li></ul>
                 </div>
               </article>
 
-              <article class="work">
+              <article class="work card">
                 <figure class="work-fig"><svg class="pj-svg" role="img" aria-label="Diagram: 4-DOF RRRP AOI Robotic Manipulator" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="g9a" x1="0" y1="0" x2="0.5" y2="1"><stop offset="0%" stop-color="#2C1810"/><stop offset="100%" stop-color="#1B0F0A"/></linearGradient>
@@ -398,13 +671,14 @@
             </svg><figcaption class="work-tag">Michigan Tech</figcaption></figure>
                 <div class="work-body">
                   <h3>4-DOF RRRP AOI Robotic Manipulator</h3>
+                  <ul class="chips chips--key"><li>SolidWorks</li><li>Simscape Multibody</li><li>Control Systems</li></ul>
                   <p>Designed and simulated a 4-DOF RRRP robotic manipulator for Automated Optical Inspection (AOI) using SolidWorks, MATLAB Simulink, and Simscape Multibody. Developed inverse kinematics and smooth 3D trajectory planning across 8 inspection waypoints using polynomial interpolation and homogeneous transformation matrices.</p>
                   <p>Implemented a PD controller (Kp = Kd = 5) with gravity and Coriolis compensation for accurate, stable trajectory tracking — achieving collision-free motion with minimal tracking error throughout a 14-second simulation.</p>
-                  <ul class="chips" aria-label="Tools"><li>SolidWorks</li><li>MATLAB</li><li>Simulink</li><li>Simscape Multibody</li><li>Inverse Kinematics</li><li>Trajectory Planning</li></ul>
+                  <ul class="chips"><li>SolidWorks</li><li>MATLAB</li><li>Simulink</li><li>Simscape Multibody</li><li>Inverse Kinematics</li><li>Trajectory Planning</li></ul>
                 </div>
               </article>
 
-              <article class="work">
+              <article class="work card">
                 <figure class="work-fig"><svg class="pj-svg" role="img" aria-label="Diagram: Dynamic Temperature Cooling — Allen-Bradley PLC" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="g1a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6B4226"/><stop offset="100%" stop-color="#3E2723"/></linearGradient>
@@ -469,13 +743,14 @@
             </svg><figcaption class="work-tag">Michigan Tech</figcaption></figure>
                 <div class="work-body">
                   <h3>Dynamic Temperature Cooling — Allen-Bradley PLC</h3>
+                  <ul class="chips chips--key"><li>PLC</li><li>SCADA</li><li>Ladder Logic</li></ul>
                   <p>Engineered and programmed an Allen-Bradley CompactLogix PLC-based forced convection cooling system using Ladder Logic with programmable duty-cycle profiles (33%, 50%, and 66%) for autonomous thermal process control. Developed an Ignition SCADA HMI for real-time monitoring and validated cooling performance on Aluminum 6061 and Nylon 101.</p>
-                  <p class="status-line"><span class="status status--review">Under review</span> Research publication — <em>Materials &amp; Design</em> (Elsevier). <a href="#archive" data-dest="archive" class="text-link">In the Research Archive</a></p>
-                  <ul class="chips" aria-label="Tools"><li>Allen-Bradley PLC</li><li>Ignition SCADA</li><li>RSLogix 5000</li><li>Ladder Logic</li><li>FactoryTalk HMI</li></ul>
+                  <p><strong>Status:</strong> Research publication under review — <em>Materials &amp; Design</em> (Elsevier).</p>
+                  <ul class="chips"><li>Allen-Bradley PLC</li><li>Ignition SCADA</li><li>RSLogix 5000</li><li>Ladder Logic</li><li>FactoryTalk HMI</li></ul>
                 </div>
               </article>
 
-              <article class="work">
+              <article class="work card">
                 <figure class="work-fig"><svg class="pj-svg" role="img" aria-label="Diagram: FANUC Robot EOAT Automation" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="g2a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4E342E"/><stop offset="100%" stop-color="#2C1810"/></linearGradient>
@@ -537,12 +812,13 @@
             </svg><figcaption class="work-tag">Michigan Tech</figcaption></figure>
                 <div class="work-body">
                   <h3>FANUC Robot EOAT Automation</h3>
+                  <ul class="chips chips--key"><li>FANUC</li><li>ROBOGUIDE</li><li>TP Programming</li></ul>
                   <p>Designed, 3D printed, and assembled a vacuum-based end-of-arm tool (EOAT) in SolidWorks for automated tennis racket overgrip application using a FANUC robot. Integrated relay-controlled DC motor circuitry and pneumatics, then programmed synchronized robot motion with TP programming and verified the workflow in ROBOGUIDE. Evaluated 20+ test configurations, achieving consistent, defect-free overgrip application at 5V motor input and 80 mm/s robot speed.</p>
-                  <ul class="chips" aria-label="Tools"><li>FANUC Robot</li><li>TP Programming</li><li>ROBOGUIDE</li><li>EOAT Design</li><li>Motion Planning</li></ul>
+                  <ul class="chips"><li>FANUC Robot</li><li>TP Programming</li><li>ROBOGUIDE</li><li>EOAT Design</li><li>Motion Planning</li></ul>
                 </div>
               </article>
 
-              <article class="work">
+              <article class="work card">
                 <figure class="work-fig"><svg class="pj-svg" role="img" aria-label="Diagram: Mobile Robot Navigation — ROS &amp; SLAM" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="g5a" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3E2723"/><stop offset="100%" stop-color="#1B0F0A"/></linearGradient>
@@ -617,12 +893,13 @@
             </svg><figcaption class="work-tag">Michigan Tech</figcaption></figure>
                 <div class="work-body">
                   <h3>Mobile Robot Navigation — ROS &amp; SLAM</h3>
+                  <ul class="chips chips--key"><li>ROS</li><li>SLAM</li><li>Gazebo</li></ul>
                   <p>Programmed multi-sensor mobile robots for wall-following and autonomous mapping using ROS and SLAM algorithms in a Gazebo simulation environment. Implemented sensor fusion for reliable real-time navigation, and validated performance by generating environment maps and demonstrating reliable path-following on real-world hardware.</p>
-                  <ul class="chips" aria-label="Tools"><li>ROS</li><li>SLAM</li><li>Gazebo</li><li>Python</li><li>Sensor Fusion</li></ul>
+                  <ul class="chips"><li>ROS</li><li>SLAM</li><li>Gazebo</li><li>Python</li><li>Sensor Fusion</li></ul>
                 </div>
               </article>
 
-              <article class="work">
+              <article class="work card">
                 <figure class="work-fig"><svg class="pj-svg" role="img" aria-label="Diagram: Anti-Collision Warning System" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="g6a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1B0F0A"/><stop offset="100%" stop-color="#3E2723"/></linearGradient>
@@ -689,312 +966,86 @@
             </svg><figcaption class="work-tag">Marwadi Univ.</figcaption></figure>
                 <div class="work-body">
                   <h3>Anti-Collision Warning System</h3>
+                  <ul class="chips chips--key"><li>Arduino</li><li>Sensors</li><li>C</li></ul>
                   <p>Developed an ultrasonic sensor and Arduino-based system to reduce blind spot risks in heavy vehicles. Real-time distance detection triggers audible and visual warnings for drivers, enhancing road safety.</p>
-                  <ul class="chips" aria-label="Tools"><li>Arduino</li><li>Ultrasonic Sensors</li><li>C Programming</li><li>Embedded Systems</li><li>PCB Design</li></ul>
+                  <ul class="chips"><li>Arduino</li><li>Ultrasonic Sensors</li><li>C Programming</li><li>Embedded Systems</li><li>PCB Design</li></ul>
                 </div>
               </article>
 
             </div>
-
-            <h3 class="sub-title">The tool wall</h3>
-            <div class="skills">
-              <div class="skill-set">
-                <h4>Industrial Automation</h4>
-                <ul class="levels">
-                  <li><span>RSLogix 5000 (Allen-Bradley)</span><i style="--l:92%"></i></li>
-                  <li><span>TIA Portal (Siemens S7-1500/1200)</span><i style="--l:85%"></i></li>
-                  <li><span>SCADA (Ignition)</span><i style="--l:87%"></i></li>
-                  <li><span>HMI (FactoryTalk)</span><i style="--l:80%"></i></li>
-                  <li><span>Ladder Logic Programming</span><i style="--l:93%"></i></li>
-                  <li><span>Structured Text (ST)</span><i style="--l:76%"></i></li>
-                </ul>
-              </div>
-              <div class="skill-set">
-                <h4>Robotics</h4>
-                <ul class="levels">
-                  <li><span>FANUC (TP / ROBOGUIDE)</span><i style="--l:88%"></i></li>
-                  <li><span>ROS / Gazebo / Rviz</span><i style="--l:80%"></i></li>
-                  <li><span>SLAM &amp; Navigation</span><i style="--l:78%"></i></li>
-                </ul>
-                <h4>Programming</h4>
-                <ul class="levels">
-                  <li><span>Python</span><i style="--l:82%"></i></li>
-                  <li><span>MATLAB / Simulink</span><i style="--l:85%"></i></li>
-                  <li><span>C</span><i style="--l:75%"></i></li>
-                  <li><span>LabVIEW</span><i style="--l:78%"></i></li>
-                </ul>
-              </div>
-              <div class="skill-set">
-                <h4>Design &amp; Simulation</h4>
-                <ul class="chips"><li>SolidWorks</li><li>AutoCAD</li><li>Fusion 360</li><li>MATLAB</li><li>Gazebo</li><li>Rviz</li><li>SLAM</li><li>LabVIEW</li><li>Linux</li><li>ROBOGUIDE</li></ul>
-              </div>
-            </div>
-
-            <nav class="dest-next" aria-label="Other destinations">
-              <a href="#observatory" data-dest="observatory">Observatory →</a>
-              <a href="#archive" data-dest="archive">Research Archive →</a>
+            <nav class="dest-next" aria-label="Continue">
+              <button type="button" class="next-road" data-close>Continue on the main road <span aria-hidden="true">→</span></button>
+              <a href="#hobbies" data-dest="hobbies">Next: Hobbies →</a>
             </nav>
           </div>
         </div>
       </section>
 
-      <!-- ─────────── OBSERVATORY ─────────── -->
-      <section class="dest dest--observatory" id="observatory" aria-labelledby="observatory-title" data-dest-panel="observatory">
+      <!-- ─────────── BOOKS — four houses deep in the forest ─────────── -->
+      <section class="dest dest--books" id="books" aria-labelledby="books-title" data-panel="books" data-book="amber">
         <div class="room" aria-hidden="true">
           <div class="room-glow"></div>
-          <svg class="room-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
-            <defs>
-              <linearGradient id="slitSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1a33"/><stop offset="1" stop-color="#132544"/></linearGradient>
-            </defs>
-            <!-- dome ribs -->
-            <g fill="none" stroke="#2a3a58" stroke-width="3" opacity=".8">
-              <path d="M-100 900 Q800 -380 1700 900"/><path d="M100 900 Q800 -200 1500 900"/><path d="M300 900 Q800 -40 1300 900"/>
-              <path d="M800 -60 V900" stroke-width="2" opacity=".5"/>
+          <!-- Amber Windows: a wooden house in a mountain village -->
+          <svg class="room-art art-amber" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <rect x="1020" y="110" width="380" height="400" rx="6" fill="#0b1424" stroke="#3a2412" stroke-width="18"/>
+            <line x1="1210" y1="110" x2="1210" y2="510" stroke="#3a2412" stroke-width="9"/><line x1="1020" y1="300" x2="1400" y2="300" stroke="#3a2412" stroke-width="9"/>
+            <path d="M1030 510 L1110 330 L1170 420 L1240 260 L1320 400 L1390 330 V510 Z" fill="#1b2840"/>
+            <path d="M1110 330 L1128 368 L1095 365 Z M1240 260 L1262 305 L1220 305 Z" fill="#dfe6f0" opacity=".75"/>
+            <path d="M1290 510 V440 l14 -40 l14 40 V510 Z" fill="#0d0907"/><rect x="1150" y="470" width="40" height="40" fill="#0d0907"/><rect x="1162" y="482" width="12" height="12" fill="#f0a24a"/>
+            <g fill="#2a190c"><rect x="0" y="690" width="1600" height="28"/><rect x="140" y="560" width="160" height="130" rx="6"/></g>
+            <circle cx="220" cy="540" r="26" fill="#f0a24a" opacity=".5"/>
+            <g stroke="#3a2412" stroke-width="10"><line x1="0" y1="200" x2="600" y2="200"/><line x1="0" y1="420" x2="600" y2="420"/></g>
+          </svg>
+          <!-- The Ocean of Cold Roses: a seaside room -->
+          <svg class="room-art art-ocean" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <rect x="560" y="100" width="480" height="440" rx="8" fill="#0a1628" stroke="#2c3240" stroke-width="18"/>
+            <line x1="800" y1="100" x2="800" y2="540" stroke="#2c3240" stroke-width="9"/>
+            <path d="M570 360 L650 300 L720 330 L800 280 L880 320 L960 290 L1030 340 V380 H570 Z" fill="#17243a"/>
+            <rect x="570" y="380" width="460" height="150" fill="#0e1f36"/>
+            <path d="M840 380 l14 150 h-28 z" fill="#c9d6ea" opacity=".25"/>
+            <circle cx="845" cy="170" r="22" fill="#e8ebf2" opacity=".85"/>
+            <rect x="980" y="330" width="10" height="50" fill="#cfd7e4" opacity=".7"/>
+            <g transform="translate(330 560)"><rect x="-30" y="40" width="60" height="110" rx="10" fill="#1a2232"/>
+              <g fill="#8e1b2a"><circle cx="-24" cy="20" r="16"/><circle cx="10" cy="0" r="18"/><circle cx="30" cy="30" r="14"/><circle cx="-6" cy="34" r="12"/></g>
+              <g stroke="#1f3a2a" stroke-width="5"><line x1="0" y1="40" x2="-20" y2="25"/><line x1="0" y1="40" x2="10" y2="10"/></g></g>
+            <rect x="0" y="720" width="1600" height="180" fill="#0b0f16"/>
+          </svg>
+          <!-- Iridescent Eyes: Kharun, in the canyons -->
+          <svg class="room-art art-iridescent" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <defs><linearGradient id="iriSky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b2a5a"/><stop offset=".45" stop-color="#3a1f55"/><stop offset=".75" stop-color="#1d5a63"/><stop offset="1" stop-color="#5a3b2a"/></linearGradient></defs>
+            <circle cx="800" cy="330" r="230" fill="url(#iriSky)" stroke="#5a3424" stroke-width="22"/>
+            <path d="M590 420 L640 320 L700 360 L740 250 L790 330 L860 270 L910 350 L960 300 L1010 420 A230 230 0 0 1 590 420 Z" fill="#6e3424"/>
+            <path d="M600 470 L700 420 L800 450 L900 410 L1000 470 A230 230 0 0 1 600 470 Z" fill="#4a2318"/>
+            <g fill="#e9f4ff" opacity=".8"><circle cx="720" cy="190" r="2"/><circle cx="880" cy="160" r="1.6"/><circle cx="800" cy="220" r="1.4"/></g>
+            <rect x="0" y="720" width="1600" height="180" fill="#160c08"/>
+            <g fill="#2a1710"><rect x="140" y="520" width="200" height="200" rx="40"/><rect x="1260" y="560" width="180" height="160" rx="36"/></g>
+          </svg>
+          <!-- Alam al Qarib: beyond the threshold -->
+          <svg class="room-art art-alam" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <defs><radialGradient id="alamGlow" cx=".5" cy=".6" r=".6"><stop offset="0" stop-color="#6b4fa8" stop-opacity=".55"/><stop offset="1" stop-color="#0b0a16" stop-opacity="0"/></radialGradient></defs>
+            <path d="M610 760 V340 Q610 160 800 100 Q990 160 990 340 V760 Z" fill="#0c0b18" stroke="#2e2a3a" stroke-width="22"/>
+            <path d="M610 760 V340 Q610 160 800 100 Q990 160 990 340 V760 Z" fill="url(#alamGlow)"/>
+            <g stroke="#3b3550" stroke-width="5" fill="none" opacity=".8">
+              <path d="M700 260 l100 -60 l100 60 l0 120 l-100 60 l-100 -60 z"/><path d="M800 200 v240 M700 260 l200 120 M900 260 l-200 120"/>
             </g>
-            <!-- slit open to the sky -->
-            <path d="M720 0 H880 L870 520 H730 Z" fill="url(#slitSky)"/>
-            <g fill="#e9eef8"><circle cx="760" cy="80" r="1.8"/><circle cx="820" cy="140" r="1.2"/><circle cx="790" cy="230" r="2.2"/><circle cx="850" cy="300" r="1.4"/><circle cx="760" cy="380" r="1.2"/><circle cx="835" cy="430" r="1.8"/><circle cx="775" cy="170" r="1"/></g>
-            <!-- telescope -->
-            <g fill="#141d2e">
-              <rect x="640" y="360" width="420" height="58" rx="22" transform="rotate(-32 850 389)"/>
-              <rect x="590" y="452" width="120" height="36" rx="12" transform="rotate(-32 650 470)"/>
-              <path d="M860 520 L780 900 H820 L870 600 L920 900 H960 Z"/>
-              <circle cx="866" cy="520" r="34"/>
-            </g>
-            <!-- quiet instrument panels (decorative — no data) -->
-            <g opacity=".35" fill="none" stroke="#8fb0d8" stroke-width="2">
-              <rect x="160" y="520" width="300" height="170" rx="8" fill="#0c1424"/>
-              <path d="M180 610 q30 -30 60 0 t60 0 t60 0 t60 0" />
-              <rect x="1180" y="520" width="280" height="170" rx="8" fill="#0c1424"/>
-              <circle cx="1320" cy="605" r="55"/><circle cx="1320" cy="605" r="30"/><line x1="1260" y1="605" x2="1380" y2="605"/><line x1="1320" y1="545" x2="1320" y2="665"/>
-            </g>
-            <rect x="0" y="760" width="1600" height="140" fill="#070b14"/>
+            <g fill="#b9a6ff" opacity=".6"><circle cx="420" cy="300" r="3"/><circle cx="1180" cy="240" r="2.5"/><circle cx="1260" cy="420" r="2"/><circle cx="360" cy="480" r="2.2"/></g>
+            <rect x="0" y="760" width="1600" height="140" fill="#08070e"/>
           </svg>
         </div>
         <div class="dest-scroll">
           <div class="dest-bar">
-            <button type="button" class="back" data-close><span aria-hidden="true">←</span> Back to the village</button>
-            <button type="button" class="tool" data-open-map aria-haspopup="dialog">Map</button>
-          </div>
-          <div class="dest-inner">
-            <header class="dest-head">
-              <p class="kicker">The Observatory</p>
-              <h2 id="observatory-title" tabindex="-1">AI, computer vision &amp; intelligent inspection</h2>
-              <p class="lede">Applying computer vision and deep learning to automated defect detection and predictive maintenance for Industry 4.0 manufacturing systems.</p>
-            </header>
-
-            <article class="work work--wide">
-              <figure class="work-fig"><svg class="pj-svg" role="img" aria-label="Diagram: VLM-Assisted Prognostics — Turbofan RUL on NASA C-MAPSS" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="g10a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2C1810"/><stop offset="100%" stop-color="#0F0805"/></linearGradient>
-              </defs>
-              <rect width="600" height="375" fill="url(#g10a)"/>
-              <!-- Turbofan engine (side view) -->
-              <ellipse cx="70" cy="110" rx="18" ry="55" fill="#1a1a1a" stroke="#D4A574" stroke-width="2"/>
-              <line x1="70" y1="60" x2="70" y2="160" stroke="#8B5E3C" stroke-width="1"/>
-              <line x1="55" y1="80" x2="85" y2="140" stroke="#8B5E3C" stroke-width="1"/>
-              <line x1="55" y1="140" x2="85" y2="80" stroke="#8B5E3C" stroke-width="1"/>
-              <path d="M70,55 L170,72 L170,148 L70,165" fill="#222" stroke="#8B5E3C" stroke-width="1.5"/>
-              <rect x="95" y="92" width="65" height="36" rx="4" fill="#2C1810" stroke="#A0826D" stroke-width="1"/>
-              <text x="127" y="114" text-anchor="middle" fill="#D4A574" font-size="8" font-family="monospace">HPC · HPT</text>
-              <text x="115" y="188" text-anchor="middle" fill="#D4A574" font-size="9" font-family="monospace" font-weight="bold">C-MAPSS</text>
-              <text x="115" y="201" text-anchor="middle" fill="#A0826D" font-size="7" font-family="monospace">21 sensors · 707 engines</text>
-              <!-- Sensor plot panel -->
-              <rect x="195" y="45" width="175" height="130" rx="6" fill="#1a1a1a" stroke="#8B5E3C" stroke-width="1.5"/>
-              <text x="282" y="62" text-anchor="middle" fill="#D4A574" font-size="8" font-family="monospace">SENSOR PLOTS</text>
-              <line x1="205" y1="160" x2="360" y2="160" stroke="#5D4037" stroke-width="1"/>
-              <polyline points="205,140 225,138 245,141 265,135 285,132 305,124 325,115 345,100 360,88" fill="none" stroke="#D4A574" stroke-width="1.8"/>
-              <polyline points="205,100 225,102 245,99 265,104 285,106 305,112 325,120 345,132 360,142" fill="none" stroke="#A0826D" stroke-width="1.3"/>
-              <polyline points="205,80 225,78 245,81 265,79 285,80 305,78 325,81 345,79 360,80" fill="none" stroke="#6B4226" stroke-width="1.2"/>
-              <line x1="325" y1="70" x2="325" y2="160" stroke="#D4A574" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
-              <!-- Arrows: data to two branches -->
-              <line x1="170" y1="110" x2="193" y2="110" stroke="#D4A574" stroke-width="1.5" stroke-dasharray="4,3"/>
-              <line x1="282" y1="175" x2="282" y2="210" stroke="#D4A574" stroke-width="1.5" stroke-dasharray="4,3"/>
-              <polygon points="277,207 282,215 287,207" fill="#D4A574"/>
-              <!-- VLM observer -->
-              <rect x="215" y="217" width="135" height="44" rx="6" fill="#2C1810" stroke="#D4A574" stroke-width="1.5"/>
-              <text x="282" y="236" text-anchor="middle" fill="#D4A574" font-size="10" font-family="monospace" font-weight="bold">VLM OBSERVER</text>
-              <text x="282" y="251" text-anchor="middle" fill="#A0826D" font-size="7" font-family="monospace">Qwen2.5-VL-7B · trend · band · abstain</text>
-              <!-- Numerical branch -->
-              <rect x="50" y="217" width="135" height="44" rx="6" fill="#2C1810" stroke="#8B5E3C" stroke-width="1.5"/>
-              <text x="117" y="236" text-anchor="middle" fill="#D4A574" font-size="10" font-family="monospace" font-weight="bold">8 RUL MODELS</text>
-              <text x="117" y="251" text-anchor="middle" fill="#A0826D" font-size="7" font-family="monospace">XGBoost · BiLSTM · TCN · Transformer</text>
-              <line x1="115" y1="205" x2="115" y2="215" stroke="#D4A574" stroke-width="1.5" stroke-dasharray="3,2"/>
-              <!-- To fusion -->
-              <line x1="117" y1="261" x2="117" y2="285" stroke="#A0826D" stroke-width="1.2"/>
-              <line x1="282" y1="261" x2="282" y2="285" stroke="#A0826D" stroke-width="1.2" stroke-dasharray="3,2"/>
-              <line x1="117" y1="285" x2="282" y2="285" stroke="#A0826D" stroke-width="1.2"/>
-              <line x1="200" y1="285" x2="200" y2="293" stroke="#A0826D" stroke-width="1.2"/>
-              <rect x="135" y="293" width="130" height="26" rx="5" fill="#1a1a1a" stroke="#D4A574" stroke-width="1.5"/>
-              <text x="200" y="310" text-anchor="middle" fill="#D4A574" font-size="8" font-family="monospace" font-weight="bold">DETERMINISTIC FUSION</text>
-              <!-- Findings panel -->
-              <rect x="400" y="45" width="175" height="275" rx="8" fill="#1a1a1a" stroke="#8B5E3C" stroke-width="1.5"/>
-              <text x="487" y="68" text-anchor="middle" fill="#D4A574" font-size="11" font-family="monospace" font-weight="bold">FIGURE LEGIBILITY</text>
-              <line x1="410" y1="78" x2="565" y2="78" stroke="#5D4037" stroke-width="1"/>
-              <text x="415" y="98" fill="#A0826D" font-size="8" font-family="monospace">Unreadable figures</text>
-              <text x="415" y="120" fill="#A0826D" font-size="7" font-family="monospace">FD001</text>
-              <rect x="455" y="112" width="100" height="10" rx="2" fill="#2C1810"/><rect x="455" y="112" width="20" height="10" rx="2" fill="#D4A574"/>
-              <text x="415" y="140" fill="#A0826D" font-size="7" font-family="monospace">FD003</text>
-              <rect x="455" y="132" width="100" height="10" rx="2" fill="#2C1810"/><rect x="455" y="132" width="13" height="10" rx="2" fill="#D4A574"/>
-              <text x="415" y="160" fill="#A0826D" font-size="7" font-family="monospace">FD002</text>
-              <rect x="455" y="152" width="100" height="10" rx="2" fill="#2C1810"/><rect x="455" y="152" width="60" height="10" rx="2" fill="#C8956C"/>
-              <text x="415" y="180" fill="#A0826D" font-size="7" font-family="monospace">FD004</text>
-              <rect x="455" y="172" width="100" height="10" rx="2" fill="#2C1810"/><rect x="455" y="172" width="58" height="10" rx="2" fill="#C8956C"/>
-              <text x="487" y="203" text-anchor="middle" fill="#6B4226" font-size="7" font-family="monospace">1 regime  vs  6 regimes</text>
-              <line x1="410" y1="215" x2="565" y2="215" stroke="#5D4037" stroke-width="1"/>
-              <text x="415" y="235" fill="#A0826D" font-size="8" font-family="monospace">3 seeds · 4 subsets</text>
-              <text x="415" y="252" fill="#A0826D" font-size="8" font-family="monospace">2,121 VLM queries</text>
-              <text x="415" y="269" fill="#A0826D" font-size="8" font-family="monospace">Bounded ±15% reweight</text>
-              <text x="415" y="286" fill="#A0826D" font-size="8" font-family="monospace">Wilcoxon + paired t-test</text>
-              <text x="487" y="308" text-anchor="middle" fill="#6B4226" font-size="8" font-family="monospace">Abstention as signal</text>
-              <!-- Bottom label -->
-              <text x="300" y="350" text-anchor="middle" fill="#D4A574" font-size="14" font-family="sans-serif" font-weight="bold">VLM Evidence for Turbofan RUL Prognostics</text>
-              <text x="300" y="366" text-anchor="middle" fill="#A0826D" font-size="10" font-family="monospace">NASA C-MAPSS · Vision-Language + Numerical Fusion</text>
-            </svg><figcaption class="work-tag">Research · Michigan Tech</figcaption></figure>
-              <div class="work-body">
-                <h3>VLM-Assisted Prognostics — Turbofan RUL on NASA C-MAPSS</h3>
-                <p>Built a two-branch prognostic framework that pairs eight numerical remaining-useful-life (RUL) models (XGBoost, BiLSTM, TCN, MS-TCN, Transformer and more) with Qwen2.5-VL-7B, which reads full-history plots of all 21 engine sensors and reports degradation trend, regime, a qualitative life band and figure legibility — or abstains when a plot is unreadable. A deterministic, bounded fusion rule keeps the final RUL under numerical control.</p>
-                <p>Evaluated on all four C-MAPSS subsets (707 test engines) across three random seeds. Visual evidence did not improve RUL accuracy, but it exposed a strong reliability signal: the VLM judged 13–20% of figures unreadable under a single operating condition versus 58–60% under six — pointing to VLMs as a qualitative screening and evidence-quality layer rather than a numerical predictor.</p>
-                <p class="status-line"><span class="status status--submitted">Submitted</span> Submitted for publication — <em>Aerospace Science and Technology</em> (Elsevier).</p>
-                <ul class="chips" aria-label="Tools"><li>Python</li><li>PyTorch</li><li>Qwen2.5-VL</li><li>XGBoost</li><li>Transformers</li><li>Predictive Maintenance</li></ul>
-                <a href="https://github.com/Md-Rafsan-Isdani/C-MAPSS-VLM-Prognostics" target="_blank" rel="noopener" class="btn btn-gold btn-sm">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
-                  View code on GitHub
-                </a>
-              </div>
-            </article>
-
-            <div class="obs-grid">
-              <article class="panel">
-                <p class="kicker">Current role · Jul 2026 – Present</p>
-                <h3>Volunteer Research Assistant — Applied Computing</h3>
-                <p class="muted">Michigan Technological University</p>
-                <p>Conducting literature reviews and technical documentation on AI-enabled industrial inspection, computer vision, and smart manufacturing systems. Analyzing camera image datasets and evaluating machine vision techniques for automated defect detection and quality inspection.</p>
-                <p><strong>Focus:</strong> Designing and developing AI-based inspection solutions for Industry 4.0 manufacturing applications.</p>
-              </article>
-              <article class="panel">
-                <p class="kicker">Instruments</p>
-                <h3>AI/ML &amp; Computer Vision</h3>
-                <ul class="levels">
-                  <li><span>Machine Learning</span><i style="--l:78%"></i></li>
-                  <li><span>Deep Learning (PyTorch)</span><i style="--l:75%"></i></li>
-                  <li><span>Computer Vision</span><i style="--l:76%"></i></li>
-                  <li><span>Predictive Maintenance</span><i style="--l:72%"></i></li>
-                </ul>
-              </article>
-            </div>
-
-            <nav class="dest-next" aria-label="Other destinations">
-              <a href="#archive" data-dest="archive">Research Archive →</a>
-              <a href="#workshop" data-dest="workshop">Engineering Workshop →</a>
-            </nav>
-          </div>
-        </div>
-      </section>
-
-      <!-- ─────────── RESEARCH ARCHIVE ─────────── -->
-      <section class="dest dest--archive" id="archive" aria-labelledby="archive-title" data-dest-panel="archive">
-        <div class="room" aria-hidden="true">
-          <div class="room-glow"></div>
-          <div class="shelves shelves--l"></div>
-          <div class="shelves shelves--r"></div>
-          <svg class="room-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
-            <path d="M640 520 V230 a160 160 0 0 1 320 0 V520 Z" fill="#0b1426" stroke="#2c2117" stroke-width="16"/>
-            <line x1="800" y1="72" x2="800" y2="520" stroke="#2c2117" stroke-width="8"/>
-            <g fill="#dfe7f2" opacity=".6"><circle cx="700" cy="260" r="2"/><circle cx="760" cy="330" r="1.5"/><circle cx="860" cy="200" r="2"/><circle cx="900" cy="380" r="1.6"/><circle cx="720" cy="450" r="1.4"/></g>
-            <rect x="0" y="780" width="1600" height="120" fill="#120d09"/>
-            <rect x="520" y="700" width="560" height="26" fill="#2b1e14"/>
-          </svg>
-        </div>
-        <div class="dest-scroll">
-          <div class="dest-bar">
-            <button type="button" class="back" data-close><span aria-hidden="true">←</span> Back to the village</button>
-            <button type="button" class="tool" data-open-map aria-haspopup="dialog">Map</button>
-          </div>
-          <div class="dest-inner">
-            <header class="dest-head">
-              <p class="kicker">The Research Archive</p>
-              <h2 id="archive-title" tabindex="-1">Manuscripts &amp; research papers</h2>
-              <p class="lede">Each entry carries its current status, stated plainly. Nothing is marked published until it is.</p>
-            </header>
-
-            <ul class="legend" aria-label="Status key">
-              <li><span class="status status--submitted">Submitted</span> sent to a journal</li>
-              <li><span class="status status--review">Under review</span> in peer review</li>
-            </ul>
-
-            <div class="papers">
-              <article class="paper">
-                <span class="status status--submitted">Submitted</span>
-                <p class="paper-kind">Research manuscript · Prognostics &amp; Health Management</p>
-                <h3>VLM-Assisted Prognostics — Turbofan RUL on NASA C-MAPSS</h3>
-                <p class="paper-venue"><em>Aerospace Science and Technology</em> (Elsevier)</p>
-                <p>A two-branch prognostic framework pairing eight numerical RUL models with Qwen2.5-VL-7B reading full-history sensor plots, joined by a deterministic, bounded fusion rule. Evaluated on all four C-MAPSS subsets (707 test engines) across three random seeds.</p>
-                <p class="paper-links">
-                  <a href="https://github.com/Md-Rafsan-Isdani/C-MAPSS-VLM-Prognostics" target="_blank" rel="noopener" class="text-link">Code repository</a>
-                  <a href="#observatory" data-dest="observatory" class="text-link">Full summary in the Observatory</a>
-                </p>
-              </article>
-
-              <article class="paper">
-                <span class="status status--review">Under review</span>
-                <p class="paper-kind">Research manuscript · Thermal process control</p>
-                <h3>Dynamic Temperature Cooling — Allen-Bradley PLC</h3>
-                <p class="paper-venue"><em>Materials &amp; Design</em> (Elsevier)</p>
-                <p>An Allen-Bradley CompactLogix PLC-based forced convection cooling system with programmable duty-cycle profiles (33%, 50%, and 66%), an Ignition SCADA HMI for real-time monitoring, and cooling performance validated on Aluminum 6061 and Nylon 101.</p>
-                <p class="paper-links"><a href="#workshop" data-dest="workshop" class="text-link">Project details in the Workshop</a></p>
-              </article>
-            </div>
-
-            <nav class="dest-next" aria-label="Other destinations">
-              <a href="#observatory" data-dest="observatory">Observatory →</a>
-              <a href="#library" data-dest="library">Literary House →</a>
-            </nav>
-          </div>
-        </div>
-      </section>
-
-      <!-- ─────────── LITERARY HOUSE ─────────── -->
-      <section class="dest dest--library" id="library" aria-labelledby="library-title" data-dest-panel="library">
-        <div class="room" aria-hidden="true">
-          <div class="room-glow"></div>
-          <div class="shelves shelves--l"></div>
-          <div class="shelves shelves--r"></div>
-          <svg class="room-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
-            <rect x="600" y="110" width="400" height="430" rx="6" fill="#0a1324" stroke="#2c1f15" stroke-width="18"/>
-            <line x1="800" y1="110" x2="800" y2="540" stroke="#2c1f15" stroke-width="9"/><line x1="600" y1="325" x2="1000" y2="325" stroke="#2c1f15" stroke-width="9"/>
-            <circle cx="900" cy="190" r="26" fill="#e8ebf2" opacity=".85"/>
-            <path d="M610 540 L660 450 L710 540 Z M680 540 L740 430 L800 540 Z M800 540 L850 460 L900 540 Z M880 540 L940 440 L995 540 Z" fill="#11241b"/>
-            <g fill="#e6ecf6" opacity=".7"><circle cx="640" cy="160" r="2"/><circle cx="700" cy="230" r="1.5"/><circle cx="760" cy="150" r="1.8"/><circle cx="850" cy="270" r="1.6"/><circle cx="960" cy="300" r="2"/><circle cx="660" cy="380" r="1.4"/><circle cx="940" cy="400" r="1.8"/></g>
-            <!-- writing desk, lamp, open book -->
-            <rect x="420" y="700" width="760" height="30" fill="#2a1c12"/>
-            <path d="M560 700 l40 -70 h70 l40 70 z" fill="#3a2414" opacity=".8"/>
-            <line x1="635" y1="630" x2="635" y2="580" stroke="#2a1c12" stroke-width="6"/>
-            <path d="M780 696 q60 -30 120 0 q60 -30 120 0 v6 q-60 -24 -120 0 q-60 -24 -120 0 z" fill="#d8cdb4" opacity=".35"/>
-            <rect x="0" y="800" width="1600" height="100" fill="#0f0a07"/>
-          </svg>
-        </div>
-        <div class="dest-scroll">
-          <div class="dest-bar">
-            <button type="button" class="back" data-close><span aria-hidden="true">←</span> Back to the village</button>
+            <button type="button" class="back" data-close><span aria-hidden="true">←</span> Back to the road</button>
             <button type="button" class="tool" data-open-map aria-haspopup="dialog">Map</button>
           </div>
           <div class="dest-inner">
             <header class="dest-head dest-head--center">
-              <p class="kicker">The Literary House · Fiction by Rafsan Isdani</p>
-              <h2 id="library-title" tabindex="-1">Books &amp; Writing</h2>
+              <p class="kicker">Fiction · Rafsan Isdani</p>
+              <h2 id="books-title" tabindex="-1">Books &amp; Writing</h2>
               <p class="lede lede-serif">Stories drawn to quieter things — people, places, memory, love, and what remains after something has ended.</p>
             </header>
 
-            <div class="shelf" role="group" aria-label="Choose a book">
-              <button type="button" class="shelf-book" data-book="amber" aria-pressed="true"><img src="images/book-amber-windows.jpg" alt="" loading="lazy" width="800" height="1200" /><span>Amber Windows</span></button>
-              <button type="button" class="shelf-book" data-book="ocean" aria-pressed="false"><img src="images/book-ocean-of-cold-roses.jpg" alt="" loading="lazy" width="800" height="1200" /><span>The Ocean of Cold Roses</span></button>
-              <button type="button" class="shelf-book" data-book="iridescent" aria-pressed="false"><img src="images/book-iridescent-eyes.jpg" alt="" loading="lazy" width="800" height="1278" /><span>Iridescent Eyes</span></button>
-              <button type="button" class="shelf-book" data-book="alam" aria-pressed="false"><img src="images/book-alam-al-qarib.jpg" alt="" loading="lazy" width="800" height="1200" /><span>Alam al Qarib</span></button>
-            </div>
-
             <div class="books">
-              <article class="book" data-book-detail="amber" aria-labelledby="b1">
+              <article class="book card" id="amber-windows" data-book-detail="amber" aria-labelledby="b1">
                 <div class="book-cover"><img src="images/book-amber-windows.jpg" alt="Cover of Amber Windows by Rafsan Isdani" loading="lazy" width="800" height="1200" /></div>
                 <div class="book-body">
                   <p class="book-meta"><span>No. 01</span> · First Novel</p>
@@ -1008,7 +1059,7 @@
                 </div>
               </article>
 
-              <article class="book" data-book-detail="ocean" aria-labelledby="b2">
+              <article class="book card" id="the-ocean-of-cold-roses" data-book-detail="ocean" aria-labelledby="b2">
                 <div class="book-cover"><img src="images/book-ocean-of-cold-roses.jpg" alt="Cover of The Ocean of Cold Roses by Rafsan Isdani" loading="lazy" width="800" height="1200" /></div>
                 <div class="book-body">
                   <p class="book-meta"><span>No. 02</span> · Second Novel</p>
@@ -1022,7 +1073,7 @@
                 </div>
               </article>
 
-              <article class="book" data-book-detail="iridescent" aria-labelledby="b3">
+              <article class="book card" id="iridescent-eyes" data-book-detail="iridescent" aria-labelledby="b3">
                 <div class="book-cover"><img src="images/book-iridescent-eyes.jpg" alt="Cover of Iridescent Eyes by Rafsan Isdani" loading="lazy" width="800" height="1278" /></div>
                 <div class="book-body">
                   <p class="book-meta"><span>No. 03</span> · Third Novel</p>
@@ -1036,7 +1087,7 @@
                 </div>
               </article>
 
-              <article class="book" data-book-detail="alam" aria-labelledby="b4">
+              <article class="book card" id="alam-al-qarib" data-book-detail="alam" aria-labelledby="b4">
                 <div class="book-cover"><img src="images/book-alam-al-qarib.jpg" alt="Cover of Alam al Qarib by Rafsan Isdani" loading="lazy" width="800" height="1200" /></div>
                 <div class="book-body">
                   <p class="book-meta"><span>No. 04</span> · Fourth Novel</p>
@@ -1051,162 +1102,124 @@
               </article>
             </div>
 
-            <!-- Bengali poetry shelf — add poems here when ready, e.g.
-                 <article class="poem" lang="bn"><h3>…</h3><p>…</p></article>
-                 Bengali script renders with Noto Serif Bengali (already linked). -->
+            <nav class="other-books world-only" aria-label="The other book houses">
+              <p class="kicker">The other houses in the deep forest</p>
+              <div class="other-list">
+                <a href="#amber-windows" data-dest="amber">Amber Windows <span>· the mountain village</span></a>
+                <a href="#the-ocean-of-cold-roses" data-dest="ocean">The Ocean of Cold Roses <span>· by the sea</span></a>
+                <a href="#iridescent-eyes" data-dest="iridescent">Iridescent Eyes <span>· the canyon</span></a>
+                <a href="#alam-al-qarib" data-dest="alam">Alam al Qarib <span>· beyond the threshold</span></a>
+              </div>
+            </nav>
 
-            <div class="author-bar">
+            <div class="author-bar card">
               <div>
                 <p class="author-name">Rafsan Isdani on Goodreads</p>
                 <p class="muted">Follow for new releases, ratings, and reader questions.</p>
               </div>
-              <a href="https://www.goodreads.com/author/show/72481745.Md_Rafsan_Isdani" target="_blank" rel="noopener" class="btn btn-ghost">Goodreads author profile <span aria-hidden="true">→</span></a>
+              <a href="https://www.goodreads.com/author/show/72481745.Md_Rafsan_Isdani" target="_blank" rel="noopener" class="btn btn-ghost">Goodreads Author Profile <span aria-hidden="true">→</span></a>
             </div>
-
-            <nav class="dest-next" aria-label="Other destinations">
-              <a href="#cabin" data-dest="cabin">Traveler's Cabin →</a>
-              <a href="#archive" data-dest="archive">Research Archive →</a>
+            <nav class="dest-next" aria-label="Continue">
+              <button type="button" class="next-road" data-close>Back to the crossroads <span aria-hidden="true">→</span></button>
+              <a href="#contact" data-dest="contact">Next: Contact →</a>
             </nav>
           </div>
         </div>
       </section>
 
-      <!-- ─────────── TRAVELER'S CABIN ─────────── -->
-      <section class="dest dest--cabin" id="cabin" aria-labelledby="cabin-title" data-dest-panel="cabin">
+      <!-- ─────────── HOBBIES — the lodge on the road with tire tracks ─────────── -->
+      <section class="dest dest--hobbies" id="hobbies" aria-labelledby="hobbies-title" data-panel="hobbies">
         <div class="room" aria-hidden="true">
           <div class="room-glow"></div>
           <svg class="room-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
-            <rect x="1060" y="140" width="330" height="300" rx="4" fill="#0a1324" stroke="#3a2617" stroke-width="16"/>
-            <line x1="1225" y1="140" x2="1225" y2="440" stroke="#3a2617" stroke-width="8"/>
-            <path d="M1070 440 L1110 360 L1150 440 Z M1140 440 L1190 340 L1240 440 Z M1230 440 L1280 370 L1330 440 Z M1310 440 L1350 380 L1385 440 Z" fill="#11241b"/>
-            <path d="M1068 440 h316 v-14 q-160 -20 -316 0 z" fill="#dfe6f0" opacity=".6"/>
-            <g fill="#e6ecf6" opacity=".7"><circle cx="1100" cy="180" r="2"/><circle cx="1170" cy="250" r="1.5"/><circle cx="1290" cy="200" r="1.8"/><circle cx="1350" cy="280" r="1.6"/></g>
-            <!-- desk, lamp, books -->
-            <rect x="760" y="640" width="720" height="26" fill="#2a1a10"/>
-            <path d="M880 640 l30 -60 h60 l30 60 z" fill="#4a2c16" opacity=".85"/>
-            <g fill="#2f1f14"><rect x="1240" y="580" width="22" height="60"/><rect x="1266" y="592" width="18" height="48"/><rect x="1288" y="572" width="24" height="68"/></g>
+            <rect x="980" y="130" width="420" height="330" rx="6" fill="#0a1324" stroke="#3a2617" stroke-width="16"/>
+            <line x1="1190" y1="130" x2="1190" y2="460" stroke="#3a2617" stroke-width="8"/>
+            <path d="M990 460 L1080 300 L1150 380 L1230 250 L1320 390 L1390 330 V460 Z" fill="#1a2740"/>
+            <path d="M1080 300 L1098 336 L1062 334 Z M1230 250 L1252 292 L1210 290 Z" fill="#dfe6f0" opacity=".7"/>
+            <g stroke="#3a2617" stroke-width="10" stroke-linecap="round"><line x1="230" y1="300" x2="270" y2="740"/><line x1="270" y1="290" x2="300" y2="740"/></g>
+            <g stroke="#2a1d14" stroke-width="7" stroke-linecap="round"><line x1="560" y1="740" x2="600" y2="560"/><line x1="640" y1="740" x2="600" y2="560"/><line x1="600" y1="740" x2="600" y2="560"/></g>
+            <rect x="570" y="520" width="70" height="44" rx="6" fill="#1d150f"/><circle cx="605" cy="542" r="12" fill="#0b0805" stroke="#3a2617" stroke-width="3"/>
+            <rect x="0" y="740" width="1600" height="160" fill="#120b07"/>
+          </svg>
+        </div>
+        <div class="dest-scroll">
+          <div class="dest-bar">
+            <button type="button" class="back" data-close><span aria-hidden="true">←</span> Back to the road</button>
+            <button type="button" class="tool" data-open-map aria-haspopup="dialog">Map</button>
+          </div>
+          <div class="dest-inner">
+            <header class="dest-head">
+              <p class="kicker">Hobbies</p>
+              <h2 id="hobbies-title" tabindex="-1">Beyond Engineering</h2>
+              <p class="lede">What keeps me inspired outside the lab</p>
+            </header>
+            <div class="hobbies">
+              <div class="card"><h3>Cars &amp; Automotive</h3><p>From my B.Tech in Automobile Engineering to weekend drives — cars have always been a passion. I love learning about performance tuning, vehicle dynamics, and automotive innovation.</p></div>
+              <div class="card"><h3>Outdoor Adventures</h3><p>Living in Michigan's Upper Peninsula means embracing the outdoors — hiking through snow-covered trails, exploring nature, and enjoying the rugged beauty of the Keweenaw.</p></div>
+              <div class="card"><h3>Photography</h3><p>Capturing engineering marvels, scenic landscapes, and everyday moments through my lens. Photography helps me see the world with an eye for detail and composition.</p></div>
+              <div class="card"><h3>Travel &amp; Culture</h3><p>From Bangladesh to India to Michigan — living across cultures has given me a global perspective. I enjoy exploring new places and connecting with people from diverse backgrounds.</p></div>
+              <div class="card"><h3>Fitness</h3><p>Staying disciplined and physically active — a habit shaped by my time in BNCC. Regular workouts keep me sharp and focused both mentally and physically.</p></div>
+              <div class="card"><h3>Continuous Learning</h3><p>Always exploring new technologies, reading about automation trends, and staying ahead of the curve in the rapidly evolving world of industrial robotics and AI.</p></div>
+            </div>
+            <nav class="dest-next" aria-label="Continue">
+              <button type="button" class="next-road" data-close>Continue on the main road <span aria-hidden="true">→</span></button>
+              <a href="#books" data-go="books">Next: Books →</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────── CONTACT — the post house at the end of the road ─────────── -->
+      <section class="dest dest--contact" id="contact" aria-labelledby="contact-title" data-panel="contact">
+        <div class="room" aria-hidden="true">
+          <div class="room-glow"></div>
+          <svg class="room-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <g stroke="#3a2617" stroke-width="10" fill="#160e09">
+              <rect x="150" y="150" width="420" height="320"/>
+            </g>
+            <g stroke="#3a2617" stroke-width="6"><line x1="150" y1="257" x2="570" y2="257"/><line x1="150" y1="363" x2="570" y2="363"/><line x1="290" y1="150" x2="290" y2="470"/><line x1="430" y1="150" x2="430" y2="470"/></g>
+            <g fill="#d8cdb4" opacity=".35"><rect x="175" y="200" width="80" height="40"/><rect x="320" y="300" width="80" height="44"/><rect x="460" y="410" width="80" height="40"/><rect x="460" y="190" width="70" height="50"/></g>
+            <rect x="1060" y="140" width="320" height="300" rx="4" fill="#0a1324" stroke="#3a2617" stroke-width="16"/>
+            <path d="M1070 440 L1120 350 L1170 440 Z M1160 440 L1215 340 L1270 440 Z M1250 440 L1300 365 L1370 440 Z" fill="#11241b"/>
+            <rect x="700" y="640" width="780" height="26" fill="#2a1a10"/>
+            <path d="M820 640 l30 -60 h60 l30 60 z" fill="#4a2c16" opacity=".85"/>
+            <g fill="#d8cdb4" opacity=".4"><rect x="1080" y="610" width="120" height="30" transform="rotate(-6 1140 625)"/><rect x="1180" y="618" width="110" height="24" transform="rotate(4 1235 630)"/></g>
             <rect x="0" y="780" width="1600" height="120" fill="#120b07"/>
           </svg>
         </div>
         <div class="dest-scroll">
           <div class="dest-bar">
-            <button type="button" class="back" data-close><span aria-hidden="true">←</span> Back to the village</button>
+            <button type="button" class="back" data-close><span aria-hidden="true">←</span> Back to the road</button>
             <button type="button" class="tool" data-open-map aria-haspopup="dialog">Map</button>
           </div>
           <div class="dest-inner">
-            <header class="dest-head cabin-head">
-              <div class="portrait"><img src="profile.jpg" alt="Md Rafsan Isdani" loading="lazy" /></div>
-              <div>
-                <p class="kicker">The Traveler's Cabin</p>
-                <h2 id="cabin-title" tabindex="-1">Md Rafsan Isdani</h2>
-                <p class="lede">Mechatronics, Robotics &amp; Automation Engineer · MS, Michigan Technological University</p>
-                <p class="pill"><span class="pill-dot" aria-hidden="true"></span> Open to Opportunities</p>
-              </div>
+            <header class="dest-head dest-head--center">
+              <p class="kicker">Contact</p>
+              <h2 id="contact-title" tabindex="-1">Get in Touch</h2>
+              <p class="lede">Interested in working together? Let's connect.</p>
             </header>
-
-            <div class="about">
-              <div class="about-text">
-                <p>I'm a Mechatronics, Robotics &amp; Automation Engineer with a Master of Science from <strong>Michigan Technological University</strong> and a Bachelor of Technology in Automobile Engineering from <strong>Marwadi University, India</strong>.</p>
-                <p>My expertise lies in PLC programming, SCADA system design, industrial robotics (FANUC), and real-time control — bridging mechanical systems with intelligent automation to build solutions that work on the factory floor.</p>
-                <p>Beyond engineering, I carry leadership values from serving as a <strong>Cadet Sergeant in BNCC</strong> and as <strong>Youth Chief of Bangladesh Red Crescent</strong>, experiences that shaped my discipline, teamwork, and commitment to community.</p>
-                <p>I'm currently expanding into <strong>AI-enabled industrial inspection</strong> as a Volunteer Research Assistant in the Department of Applied Computing, applying computer vision and deep learning to automated defect detection and predictive maintenance for Industry 4.0 manufacturing systems.</p>
-                <p>Away from the lab, I write literary fiction as <strong>Rafsan Isdani</strong> — four novels so far, all on the shelves of the <a href="#library" data-dest="library" class="text-link">Literary House</a>.</p>
-              </div>
-              <ul class="facts">
-                <li><b>MS</b><span>Mechatronics · Michigan Tech</span></li>
-                <li><b>B.Tech</b><span>Automobile Eng. · Marwadi University</span></li>
-                <li><b>8+</b><span>Engineering projects</span></li>
-                <li><b>GTA</b><span>Physics Dept. · Michigan Tech</span></li>
-              </ul>
-            </div>
-
-            <h3 class="sub-title">The road so far</h3>
-            <ol class="timeline">
-              <li>
-                <p class="t-date">Jul 2026 – Present</p>
-                <h4>Volunteer Research Assistant — Applied Computing</h4>
-                <p class="muted">Michigan Technological University</p>
-                <p>Conducting literature reviews and technical documentation on AI-enabled industrial inspection, computer vision, and smart manufacturing systems. Analyzing camera image datasets and evaluating machine vision techniques for automated defect detection and quality inspection.</p>
-                <p><strong>Focus:</strong> Designing and developing AI-based inspection solutions for Industry 4.0 manufacturing applications.</p>
-              </li>
-              <li>
-                <p class="t-date">2024 – 2026</p>
-                <h4>M.S. Mechatronics, Robotics &amp; Automation</h4>
-                <p class="muted">Michigan Technological University, Houghton, MI</p>
-                <p>Focus on Industrial Automation, Robotics, and Real-time Control systems.</p>
-                <p><strong>Key Courses:</strong> Advanced PLC, Real-time Robotics (FANUC), Data Acquisition &amp; Signal Processing, Control Systems, Dynamics &amp; Kinematics.</p>
-              </li>
-              <li>
-                <p class="t-date">Aug 2025 – May 2026</p>
-                <h4>Graduate Teaching Assistant — Physics</h4>
-                <p class="muted">Michigan Technological University</p>
-                <p>Instructed undergraduate physics labs, guiding over 250+ students across 2 independent engineering physics lab courses in experimental methods, instrumentation, data acquisition, and technical problem-solving.</p>
-                <p>Applied mechatronics and engineering principles to bridge theory with real-world engineering systems, evaluating performance and managing grades using Canvas and the university database.</p>
-              </li>
-              <li>
-                <p class="t-date">2019 – 2023</p>
-                <h4>B.Tech Automobile Engineering</h4>
-                <p class="muted">Marwadi University, Rajkot, Gujarat, India</p>
-                <p>Built a strong foundation in mechanical systems, thermodynamics, automotive design, manufacturing processes, and vehicle dynamics. Developed hands-on skills through projects and lab work in automotive engineering.</p>
-              </li>
-              <li>
-                <p class="t-date">Jan 2021 – Dec 2021</p>
-                <h4>Technical Intern — Office of International Affairs</h4>
-                <p class="muted">Marwadi University, Rajkot, India</p>
-                <p>Administered and maintained student records using web-based information systems and Microsoft Excel. Ensured data accuracy, consistency, and system reliability through formulas, data validation, and reporting.</p>
-              </li>
-              <li>
-                <p class="t-date">Leadership &amp; Discipline</p>
-                <h4>Cadet Sergeant — BNCC</h4>
-                <p class="muted">Bangladesh National Cadet Corps</p>
-                <p>Served as Cadet Sergeant in the Bangladesh National Cadet Corps (BNCC), developing strong leadership, discipline, and teamwork skills through rigorous military-style training, drills, and community service activities.</p>
-              </li>
-              <li>
-                <p class="t-date">2017</p>
-                <h4>Youth Chief — Bangladesh Red Crescent Society</h4>
-                <p class="muted">Chittagong Port College Unit</p>
-                <p>Led the youth division of Bangladesh Red Crescent Society at Chittagong Port College, organizing humanitarian aid activities, disaster relief awareness, first aid training, and community health campaigns.</p>
-              </li>
-            </ol>
-
-            <h3 class="sub-title">Beyond engineering</h3>
-            <div class="hobbies">
-              <div><h4>Cars &amp; Automotive</h4><p>From my B.Tech in Automobile Engineering to weekend drives — cars have always been a passion. I love learning about performance tuning, vehicle dynamics, and automotive innovation.</p></div>
-              <div><h4>Outdoor Adventures</h4><p>Living in Michigan's Upper Peninsula means embracing the outdoors — hiking through snow-covered trails, exploring nature, and enjoying the rugged beauty of the Keweenaw.</p></div>
-              <div><h4>Photography</h4><p>Capturing engineering marvels, scenic landscapes, and everyday moments through my lens. Photography helps me see the world with an eye for detail and composition.</p></div>
-              <div><h4>Travel &amp; Culture</h4><p>From Bangladesh to India to Michigan — living across cultures has given me a global perspective. I enjoy exploring new places and connecting with people from diverse backgrounds.</p></div>
-              <div><h4>Fitness</h4><p>Staying disciplined and physically active — a habit shaped by my time in BNCC. Regular workouts keep me sharp and focused both mentally and physically.</p></div>
-              <div><h4>Continuous Learning</h4><p>Always exploring new technologies, reading about automation trends, and staying ahead of the curve in the rapidly evolving world of industrial robotics and AI.</p></div>
-            </div>
-
-            <h3 class="sub-title" id="contact">Get in touch</h3>
-            <p class="muted contact-sub">Interested in working together? Let's connect.</p>
             <div class="contact">
-              <a href="https://linkedin.com/in/md-rafsan-isdani-128462199" target="_blank" rel="noopener" class="contact-item">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77A1.75 1.75 0 0 0 0 1.73v20.54A1.75 1.75 0 0 0 1.77 24h20.45A1.75 1.75 0 0 0 24 22.27V1.73A1.75 1.75 0 0 0 22.22 0Z"/></svg>
+              <a href="https://linkedin.com/in/md-rafsan-isdani-128462199" target="_blank" rel="noopener" class="linkedin-big">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77A1.75 1.75 0 0 0 0 1.73v20.54A1.75 1.75 0 0 0 1.77 24h20.45A1.75 1.75 0 0 0 24 22.27V1.73A1.75 1.75 0 0 0 22.22 0Z"/></svg>
                 Connect on LinkedIn
               </a>
-              <a href="mailto:misdani@mtu.edu" class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
-                misdani@mtu.edu
-              </a>
-              <a href="tel:+19063705570" class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                (906) 370-5570
-              </a>
-              <span class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Lansing, MI
-              </span>
-              <a href="https://www.goodreads.com/author/show/72481745.Md_Rafsan_Isdani" target="_blank" rel="noopener" class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15z"/></svg>
-                Goodreads author profile
-              </a>
+              <div class="contact-details">
+                <a href="mailto:misdani@mtu.edu" class="contact-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+                  misdani@mtu.edu
+                </a>
+                <a href="tel:+19063705570" class="contact-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  (906) 370-5570
+                </a>
+                <span class="contact-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Lansing, MI
+                </span>
+              </div>
             </div>
-
-            <nav class="dest-next" aria-label="Other destinations">
-              <a href="#workshop" data-dest="workshop">Engineering Workshop →</a>
-              <a href="#library" data-dest="library">Literary House →</a>
+            <nav class="dest-next" aria-label="Continue">
+              <button type="button" class="next-road" data-go="home">Back to the beginning <span aria-hidden="true">↑</span></button>
             </nav>
           </div>
         </div>
@@ -1217,11 +1230,9 @@
 
   <footer class="footer">
     <p>&copy; 2026 Md Rafsan Isdani. Engineered with precision.</p>
-    <p class="footer-links">
-      <a href="https://linkedin.com/in/md-rafsan-isdani-128462199" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:misdani@mtu.edu">Email</a>
-      <a href="https://www.goodreads.com/author/show/72481745.Md_Rafsan_Isdani" target="_blank" rel="noopener">Goodreads</a>
-    </p>
+    <a href="https://linkedin.com/in/md-rafsan-isdani-128462199" target="_blank" rel="noopener" class="f-link" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77A1.75 1.75 0 0 0 0 1.73v20.54A1.75 1.75 0 0 0 1.77 24h20.45A1.75 1.75 0 0 0 24 22.27V1.73A1.75 1.75 0 0 0 22.22 0Z"/></svg>
+    </a>
   </footer>
 
   <!-- ═══════════ THE MAP ═══════════ -->
@@ -1232,10 +1243,10 @@
         <button type="button" class="tool" data-close-map>Close <span aria-hidden="true">×</span></button>
       </div>
       <div class="map-canvas">
-        <svg id="mapArt" viewBox="0 0 800 560" aria-hidden="true"></svg>
+        <svg id="mapArt" viewBox="0 0 800 760" aria-hidden="true"></svg>
         <div id="mapMarkers" class="map-markers"></div>
       </div>
-      <p class="map-foot muted">Choose a place to travel there.</p>
+      <p class="map-foot">Choose a place to travel there.</p>
     </div>
   </div>
 
